@@ -13,16 +13,14 @@
 		<Button
 			variant="link"
 			href="/"
-			class="w-1/2 font-sans text-base font-bold lg:text-xl {$page.url.pathname === '/'
-				? 'underline decoration-[#CB3E38] hover:decoration-black'
-				: ''}">Home</Button
+			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			>Home</Button
 		>
 		<Button
 			variant="link"
 			href="#sobre"
-			class="w-1/2 font-sans text-base font-bold lg:text-xl {$page.url.pathname === '#sobre'
-				? 'underline decoration-[#CB3E38] hover:decoration-black'
-				: ''}">Sobre</Button
+			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			>Sobre</Button
 		>
 	</div>
 
@@ -30,25 +28,23 @@
 		<img
 			src={Logo}
 			alt="Logo BGS consultoria"
-			class={`w-20 transform transition-transform duration-500 ease-in-out hover:scale-110 ${
+			class="{`w-20 transform transition-transform duration-500 ease-in-out hover:scale-110 ${
 				scrollY === 0 ? ' scale-150 pt-2 ' : ''
-			}`}
+			}`}}"
 		/>
 	</a>
 	<div class="flex w-1/3 items-center">
 		<Button
 			variant="link"
 			href="/contact"
-			class="w-1/2 font-sans text-base font-bold lg:text-xl {$page.url.pathname === '/'
-				? 'underline decoration-[#CB3E38] hover:decoration-black'
-				: ''}">Serviços</Button
+			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			>Serviços</Button
 		>
 		<Button
 			variant="link"
 			href="/login"
-			class="w-1/2 font-sans text-base font-bold lg:text-xl {$page.url.pathname === '/'
-				? 'underline decoration-[#CB3E38] hover:decoration-black'
-				: ''}">Contato</Button
+			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			>Contato</Button
 		>
 	</div>
 </nav>
