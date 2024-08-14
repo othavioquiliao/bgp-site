@@ -1,20 +1,28 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
+	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
-	let className: any = '';
-	export { className as class };
+	export let className: string = '';
 
-	let card = {
-		title: 'Svelte is Vibe',
-		description: 'Svelte is fun and easy to learn.'
-	};
+	interface Card {
+		img: string;
+		titulo: string;
+		topicos: string[];
+	}
+	export let card: Card;
 </script>
 
-<div class={cn('h-96 bg-background text-left ', className)}>
-	<h3 class="text-lg font-bold text-gray-900 dark:text-gray-100">
-		{card.title}
-	</h3>
-	<p class="text-gray-700 dark:text-gray-400">
-		{card.description}
-	</p>
+<div class={cn('h-[45rem] bg-background text-left', className)}>
+	<img src={card.img} alt={card.titulo} />
+	<div class="flex flex-col gap-3">
+		<h3 class="text-center text-2xl font-bold text-gray-900">{card.titulo}</h3>
+		<ul class="flex flex-col items-start justify-start gap-2 text-gray-700">
+			{#each card.topicos as topico}
+				<li class="flex gap-2">
+					<ChevronRight size={20} class="h-4" color="#CB3E38" />
+					{topico}
+				</li>
+			{/each}
+		</ul>
+	</div>
 </div>

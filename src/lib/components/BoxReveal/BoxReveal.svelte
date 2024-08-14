@@ -6,29 +6,17 @@
 	export let boxColor = '#5046e6';
 	export let duration = 0.5;
 
-	//   Animation Controls
-	let mainControls = useAnimation();
-	let sideControls = useAnimation();
+	// Animation Controls
+	const mainControls = useAnimation();
+	const sideControls = useAnimation();
 
-	let viewEnter = () => {
-		// console.log("view entered");
-		mainControls.start('visible');
-		sideControls.start('visible');
-	};
-	let viewLeave = () => {
-		// console.log("view exited");
+	const viewEnter = () => {
 		mainControls.start('visible');
 		sideControls.start('visible');
 	};
 </script>
 
-<div
-	class="relative overflow-hidden"
-	style="width:{width}"
-	use:inview
-	on:inview_enter={viewEnter}
-	on:inview_leave={viewLeave}
->
+<div class="relative overflow-hidden" style="width:{width}" use:inview on:inview_enter={viewEnter}>
 	<Motion
 		let:motion
 		variants={{
@@ -37,7 +25,7 @@
 		}}
 		initial="hidden"
 		animate={mainControls}
-		transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}
+		transition={{ duration, delay: 0.25 }}
 	>
 		<div use:motion>
 			<slot>Default</slot>
@@ -50,7 +38,7 @@
 		}}
 		initial="hidden"
 		animate={sideControls}
-		transition={{ duration: duration ? duration : 0.5, ease: 'easeIn' }}
+		transition={{ duration, ease: 'easeIn' }}
 		let:motion
 	>
 		<div
