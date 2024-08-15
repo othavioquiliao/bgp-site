@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import createGlobe from 'cobe';
 	import { spring } from 'svelte/motion';
 	import { cn } from '$lib/utils';
@@ -17,6 +17,7 @@
 	let canvas: HTMLCanvasElement;
 	let phi = 0;
 	let width = 0;
+	let globe: ReturnType<typeof createGlobe>;
 
 	const onResize = () => {
 		width = canvas.offsetWidth;
@@ -32,10 +33,9 @@
 	};
 
 	onMount(() => {
-		window.addEventListener('resize', onResize);
 		onResize();
 
-		const globe = createGlobe(canvas, {
+		globe = createGlobe(canvas, {
 			devicePixelRatio: 2,
 			width: width,
 			height: width,
@@ -62,10 +62,16 @@
 			],
 			onRender: onRender
 		});
+	});
 
-		return () => window.removeEventListener('resize', onResize);
+	onDestroy(() => {
+		if (globe) {
+			globe.destroy(); // Certifique-se de que o objeto globe seja destruído corretamente
+		}
 	});
 </script>
+
+<svelte:window on:resize={onResize} />
 
 <main
 	class={cn('absolute inset-0 mx-auto aspect-[1/1] w-full min-w-[400px] max-w-[600px]', className)}
