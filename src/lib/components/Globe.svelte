@@ -41,7 +41,7 @@
 			height: width,
 			phi: 0,
 			theta: 0.0,
-			dark: -5,
+			dark: -3.5,
 			diffuse: 0.4,
 			mapSamples: 16000,
 			mapBrightness: 5,
@@ -74,7 +74,10 @@
 <svelte:window on:resize={onResize} />
 
 <main
-	class={cn('absolute inset-0 mx-auto aspect-[1/1] w-full min-w-[400px] max-w-[600px]', className)}
+	class={cn(
+		' h-min-full inset-0 aspect-[1/1] min-w-[400px] max-w-[600px]  items-center justify-center',
+		className
+	)}
 >
 	<canvas
 		class="h-full w-full [contain:layout_paint_size]"
