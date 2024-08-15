@@ -14,6 +14,7 @@
 
 	import CarregaQuandoVisivel from '$lib/components/CarregaQuandoVisivel.svelte';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
+
 	interface Card {
 		img: string;
 		titulo: string;
@@ -25,7 +26,7 @@
 			img: CDN,
 			titulo: 'Plano CDN',
 			topicos: [
-				'Solicitação de CNDs e peering com grandes provedores de conteúdo.',
+				'Solicitações de CNDs.',
 				'Peering com Google, Netflix e Facebook.',
 				'Configuração de router dedicado para peering.',
 				'Suporte completo em todo o processo.'
@@ -53,6 +54,24 @@
 			]
 		}
 	];
+
+	let networkFeatures = [
+		'Planejamento',
+		'Mapeamento completo da rede',
+		'Reestruturação do Core com ativação de PE e CE',
+		'Redundância',
+		'VLAN, MPLS, VPLS',
+		'Política de redistribuição baseada em redes declaradas; Pilha dupla IPv4/IPv6'
+	];
+
+	let serverFeatures = [
+		'Ferramentas para gerência da rede IP',
+		'Monitoramento e gráficos',
+		'DNS (Autoritativo, Recursivo, Reverso)',
+		'VPN',
+		'Servidor para OLT',
+		'Disponibilidade de adicionar espaço para o seu sistema de gerência!'
+	];
 </script>
 
 <section class="flex h-full min-h-[98%] w-4/5 items-center justify-center">
@@ -62,8 +81,8 @@
 	<GlobeEx class="w-1/2" />
 </section>
 
-<section id="sobre" class="mb-20 flex h-full w-3/5 items-start justify-center gap-10">
-	<img src={manGif} alt="Online connection" class="w-1/2" />
+<section id="sobre" class="mb-20 flex h-2/3 w-3/5 items-start justify-center gap-10">
+	<img src={manGif} alt="Online connection" class="w-1/2" loading="lazy" />
 	<div class="flex h-[80%] w-2/3 flex-col items-center justify-center gap-5">
 		<h1 class="w-full text-center text-4xl font-bold uppercase underline decoration-[#CB3E38]">
 			Sobre
@@ -80,22 +99,22 @@
 	</div>
 </section>
 
-<div class="flex w-full items-center justify-center overflow-hidden py-20">
+<div id="Planos" class="flex w-full items-center justify-center overflow-hidden pb-20 pt-10">
 	<Separator />
 	<h4 class="rounded-lg border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">Planos</h4>
 	<Separator />
 </div>
-<!-- Section Planos -->
 
-<section id="planos" class="relative flex h-full w-full items-center justify-center">
+<!-- Section Planos -->
+<section class="relative flex h-full w-full items-center justify-center">
 	<div class="flex w-3/5 justify-center gap-5">
-		{#each cards as card}
+		{#each cards as card, index (card.titulo)}
 			<SquareCard {card} />
 		{/each}
 	</div>
 </section>
 
-<div class="flex w-full items-center justify-center overflow-hidden py-20">
+<div id="estrutura-de-rede" class="flex w-full items-center justify-center overflow-hidden py-20">
 	<Separator />
 	<h4 class="text-nowrap rounded-lg border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">
 		Estrutura de Rede
@@ -104,7 +123,7 @@
 </div>
 
 <!-- Section Estrutura de Rede -->
-<section id="estrutura-de-rede" class="relative flex h-full w-3/5 items-center justify-center">
+<section class="relative flex h-full w-3/5 items-center justify-center">
 	<div class="flex w-1/2 flex-col gap-3">
 		<h1 class="mb-3 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
 			Plano OSPF
@@ -120,30 +139,12 @@
 		<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
 
 		<ul class="flex flex-col items-start justify-start gap-2 text-gray-700">
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Planejamento
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Mapeamento completo da rede
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Reestruturação do Core com ativação de PE e CE
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Redundância
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				VLAN, MPLS, VPLS
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Política de redistribuição baseada em redes declaradas; Pilha dupla IPv4/IPv6
-			</li>
+			{#each networkFeatures as feature}
+				<li class="flex gap-2">
+					<ChevronRight size={20} class="h-4" color="#CB3E38" />
+					{feature}
+				</li>
+			{/each}
 		</ul>
 	</div>
 	<div class="flex w-1/2 justify-center gap-5">
@@ -154,6 +155,7 @@
 		/>
 	</div>
 </section>
+
 <section
 	id="estrutura-de-rede"
 	class="relative flex h-full w-3/5 flex-row-reverse items-center justify-center"
@@ -175,30 +177,12 @@
 		<p class="text-pretty text-xl">Oferecemos:</p>
 
 		<ul class="flex flex-col items-start justify-start gap-2 text-gray-700">
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Ferramentas para gerência da rede IP
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Monitoramento e gráficos
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				DNS (Autoritativo, Recursivo, Reverso)
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				VPN
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Servidor para OLT
-			</li>
-			<li class="flex gap-2">
-				<ChevronRight size={20} class="h-4" color="#CB3E38" />
-				Disponibilidade de adicionar espaço para o seu sistema de gerência!
-			</li>
+			{#each serverFeatures as feature}
+				<li class="flex gap-2">
+					<ChevronRight size={20} class="h-4" color="#CB3E38" />
+					{feature}
+				</li>
+			{/each}
 		</ul>
 	</div>
 	<div class="flex w-1/2 justify-center gap-5">

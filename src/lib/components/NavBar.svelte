@@ -18,9 +18,9 @@
 		>
 		<Button
 			variant="link"
-			href="#sobre"
+			href="#Planos"
 			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
-			>Sobre</Button
+			>Planos</Button
 		>
 	</div>
 
@@ -36,9 +36,9 @@
 	<div class="flex w-1/3 items-center">
 		<Button
 			variant="link"
-			href="/contact"
+			href="#estrutura-de-rede"
 			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
-			>Serviços</Button
+			>Estrutura de Rede</Button
 		>
 		<Button
 			variant="link"

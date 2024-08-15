@@ -16,8 +16,8 @@
 	onMount(() => {
 		const observer = new IntersectionObserver(handleIntersection, {
 			root: null,
-			rootMargin: '0px',
-			threshold: 0.1
+			rootMargin: '30%', // Start loading slightly before the element is visible
+			threshold: 1 // Trigger as soon as any part of the element is visible
 		});
 
 		if (element) {
@@ -32,6 +32,6 @@
 
 <div bind:this={element} {id}>
 	{#if isVisible}
-		<img {src} {alt} />
+		<img {src} {alt} loading="eager" />
 	{/if}
 </div>
