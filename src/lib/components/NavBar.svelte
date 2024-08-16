@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import Logo from '$lib/img/logo.png';
+	import Logo from '$lib/img/BGP-branco.png';
 	import Button from './ui/button/button.svelte';
 	let scrollY: number;
 </script>
@@ -13,13 +12,13 @@
 		<Button
 			variant="link"
 			href="/"
-			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
+			class=" font-sans text-base font-bold  underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
 			>Home</Button
 		>
 		<Button
 			variant="link"
 			href="#Planos"
-			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
 			>Planos</Button
 		>
 	</div>
@@ -37,13 +36,13 @@
 		<Button
 			variant="link"
 			href="#estrutura-de-rede"
-			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
 			>Estrutura de Rede</Button
 		>
 		<Button
 			variant="link"
 			href="/login"
-			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
 			>Contato</Button
 		>
 	</div>
