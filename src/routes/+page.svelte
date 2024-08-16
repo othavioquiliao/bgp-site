@@ -1,14 +1,14 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import manGif from '$lib/img/Online connection.gif';
+	import manGif from '$lib/img/Online connection(2).gif';
 	import GlobeEx from '$lib/components/Globe.svelte';
 	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealEx.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
-	import CDN from '$lib/img/planos/CDN.png';
-	import BGP from '$lib/img/planos/BGP.png';
-	import ASN from '$lib/img/planos/ASN.png';
+	import CDN from '$lib/img/planos/Memory storage.gif';
+	import BGP from '$lib/img/planos/Secure data.gif';
+	import ASN from '$lib/img/planos/Online world.gif';
 	import BackBone from '$lib/img/planos/BackBone.gif';
 	import ServidorPlano from '$lib/img/planos/ServidorPlano.gif';
 
@@ -74,7 +74,7 @@
 	];
 </script>
 
-<section class="flex h-full min-h-[98%] w-4/5 items-center justify-center">
+<section class="flex h-full min-h-full w-4/5 items-center justify-center">
 	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/2">
 		<BoxRevealEx />
 	</div>
@@ -129,16 +129,16 @@
 			Plano OSPF
 		</h1>
 		<p class="text-pretty text-xl">
-			Consideramos este o <span class=" text-[#CB3E38]"> plano mais importante</span>, pois a
-			estrutura da sua rede é essencial para garantir a
-			<span class=" text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
+			Consideramos este o <span class=" font-semibold text-[#CB3E38]"> plano mais importante</span>,
+			pois a estrutura da sua rede é essencial para garantir a
+			<span class=" font-semibold text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
 		</p>
 		<p class="text-pretty text-xl">
 			Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 		</p>
 		<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
 
-		<ul class="flex flex-col items-start justify-start gap-2 text-gray-700">
+		<ul class="flex flex-col items-start justify-start gap-2 text-gray-100">
 			{#each networkFeatures as feature}
 				<li class="flex gap-2">
 					<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -165,8 +165,9 @@
 			Para o seu Servidor :
 		</h1>
 		<p class="text-pretty text-xl">
-			Temos <span class=" text-[#CB3E38]">soluções em virtualização</span> e máquinas físicas para
-			garantir a <span class=" text-[#CB3E38]">melhor gestão</span> para o seu provedor.
+			Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e máquinas
+			físicas para garantir a <span class=" font-semibold text-[#CB3E38]">melhor gestão</span> para o
+			seu provedor.
 		</p>
 		<p class="text-pretty text-xl">
 			Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.

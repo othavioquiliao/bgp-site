@@ -13,12 +13,12 @@
 </script>
 
 <div class={cn('h-[45rem]  ', className)}>
-	<img src={card.img} alt={card.titulo} />
+	<img src={card.img} alt={card.titulo} class="w-full" />
 	<div class="flex flex-col gap-3">
-		<h3 class="text-center text-2xl font-bold text-gray-900 underline decoration-[#CB3E38]">
+		<h3 class="text-center text-2xl font-bold text-white underline decoration-[#CB3E38]">
 			{card.titulo}
 		</h3>
-		<ul class="flex flex-col gap-2 text-gray-700">
+		<ul class="flex flex-col gap-2 text-gray-100">
 			{#each card.topicos as topico}
 				<li class=" flex items-start">
 					<ChevronRight size={30} class="h-5" color="#CB3E38" />

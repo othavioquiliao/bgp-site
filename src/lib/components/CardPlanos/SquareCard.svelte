@@ -10,7 +10,7 @@
 	export let card: Card;
 </script>
 
-<div class="relative border border-dashed border-zinc-400 p-0">
+<div class="  relative border border-dashed border-zinc-400 dark:border-white dark:bg-[#2F2F2F]">
 	{#each ['-left-3 -top-3', '-right-3 -top-3', '-bottom-3 -left-3', '-bottom-3 -right-3'] as position}
 		<CardIcon class={position} />
 	{/each}

@@ -7,19 +7,19 @@
 
 <svelte:window bind:scrollY />
 <nav
-	class="fixed z-20 flex h-16 w-full items-center justify-between bg-gradient-to-b from-white from-65% to-transparent"
+	class="fixed z-20 flex h-16 w-full items-center justify-between bg-gradient-to-b from-background from-65% to-transparent"
 >
-	<div class="flex w-1/3 items-center">
+	<div class="flex w-1/3 items-center justify-evenly">
 		<Button
 			variant="link"
 			href="/"
-			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
 			>Home</Button
 		>
 		<Button
 			variant="link"
 			href="#Planos"
-			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
 			>Planos</Button
 		>
 	</div>
@@ -33,17 +33,17 @@
 			}`}}"
 		/>
 	</a>
-	<div class="flex w-1/3 items-center">
+	<div class="flex w-1/3 items-center justify-evenly">
 		<Button
 			variant="link"
 			href="#estrutura-de-rede"
-			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
 			>Estrutura de Rede</Button
 		>
 		<Button
 			variant="link"
 			href="/login"
-			class="w-1/2 font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-black lg:text-xl"
+			class=" font-sans text-base font-bold underline decoration-[#CB3E38] hover:decoration-white lg:text-xl"
 			>Contato</Button
 		>
 	</div>

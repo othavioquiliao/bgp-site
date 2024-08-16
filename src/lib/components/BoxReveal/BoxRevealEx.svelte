@@ -9,14 +9,14 @@
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
 		<p class="select-none text-[3.5rem] font-semibold">
 			Sua Empresa esta Preparada
-			<span class="text-[#CB3E38]">?</span>
+			<span class="font-semibold text-[#CB3E38]">?</span>
 		</p>
 	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
 		<h2 class="mt-[.5rem] select-none text-[1rem]">
 			Para grande revolução do IPv6 com a
-			<span class="font-semibold text-[#CB3E38]">BGP Consultoria</span>
+			<span class="font-semibold font-semibold text-[#CB3E38]">BGP Consultoria</span>
 		</h2>
 	</BoxReveal>
 
@@ -26,10 +26,10 @@
 				<ChevronRight color="#CB3E38" size={50} class="h-5" />
 				<p>
 					Preparamos sua rede para suportar o crescente número de acessos à internet, com foco em <span
-						class="text-[#CB3E38]">qualidade</span
+						class="font-semibold text-[#CB3E38]">qualidade</span
 					>,
-					<span class="text-[#CB3E38]">estabilidade</span> e
-					<span class="text-[#CB3E38]">economia</span>.
+					<span class="font-semibold text-[#CB3E38]">estabilidade</span> e
+					<span class="font-semibold text-[#CB3E38]">economia</span>.
 				</p>
 				<br />
 			</div>
@@ -37,15 +37,17 @@
 				<ChevronRight color="#CB3E38" size={50} class="h-5" />
 				<p>
 					Fazemos isso com
-					<span class="text-[#CB3E38]">"know how"</span> e comprometimento, por meio de uma
-					<span class="text-[#CB3E38]">estrutura capacitada e apta a atender a sua demanda</span>,
-					seja pontual ou por meio de planos.
+					<span class="font-semibold text-[#CB3E38]">"know how"</span> e comprometimento, por meio
+					de uma
+					<span class="font-semibold text-[#CB3E38]"
+						>estrutura capacitada e apta a atender a sua demanda</span
+					>, seja pontual ou por meio de planos.
 				</p>
 			</div>
 		</div></BoxReveal
 	>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<Button class="mt-[1.6rem] w-48 bg-[#CB3E38]">Saiba Mais</Button>
+		<Button class="mt-[1.6rem] w-48 bg-[#CB3E38] text-white">Saiba Mais</Button>
 	</BoxReveal>
 </div>

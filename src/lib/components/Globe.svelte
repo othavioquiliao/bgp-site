@@ -41,13 +41,13 @@
 			height: width,
 			phi: 0,
 			theta: 0.0,
-			dark: -3.5,
-			diffuse: 0.4,
-			mapSamples: 16000,
-			mapBrightness: 5,
-			baseColor: [0.294, 0.294, 0.302],
-			markerColor: [0.796, 0.243, 0.22],
-			glowColor: [0.502, 0.502, 0.502],
+			dark: -5,
+			diffuse: 1.2, // 1.2
+			mapSamples: 10000,
+			mapBrightness: 6, // 6
+			baseColor: [0.129, 0.129, 0.129],
+			markerColor: [203 / 255, 62 / 255, 56 / 255],
+			glowColor: [0.129, 0.129, 0.129],
 			markers: [
 				{ location: [14.5995, 120.9842], size: 0.03 },
 				{ location: [19.076, 72.8777], size: 0.03 },
