@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import manGif from '$lib/img/Online connection(2).gif';
+	import manGif from '$lib/img/planos/Online connection(3).gif';
 	import GlobeEx from '$lib/components/Globe.svelte';
 	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealEx.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
@@ -177,7 +177,7 @@
 		</p>
 		<p class="text-pretty text-xl">Oferecemos:</p>
 
-		<ul class="flex flex-col items-start justify-start gap-2 text-gray-700">
+		<ul class="flex flex-col items-start justify-start gap-2 text-gray-100">
 			{#each serverFeatures as feature}
 				<li class="flex gap-2">
 					<ChevronRight size={20} class="h-4" color="#CB3E38" />
