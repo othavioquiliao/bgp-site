@@ -1,18 +1,17 @@
 <script lang="ts">
 	import Button from '$lib/components/ui/button/button.svelte';
-	import manGif from '$lib/img/planos/Online connection(3).gif';
 	import GlobeEx from '$lib/components/Globe.svelte';
 	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealEx.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
-	import CDN from '$lib/img/planos/Memory storage.gif';
-	import BGP from '$lib/img/planos/Secure data.gif';
-	import ASN from '$lib/img/planos/Online world.gif';
-	import BackBone from '$lib/img/planos/BackBone.gif';
-	import ServidorPlano from '$lib/img/planos/ServidorPlano.gif';
+	import manGif from '$lib/img/planos/AboutMan.gif';
+	import CDN from '$lib/img/planos/CDN.gif';
+	import BGP from '$lib/img/planos/BGP.gif';
+	import ASN from '$lib/img/planos/ASN.gif';
+	import BackBone from '$lib/img/planos/OSPF.gif';
+	import ServidorPlano from '$lib/img/planos/PlanoServidor.gif';
 
-	import CarregaQuandoVisivel from '$lib/components/CarregaQuandoVisivel.svelte';
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
 	interface Card {
@@ -99,9 +98,9 @@
 	</div>
 </section>
 
-<div id="Planos" class="flex w-full items-center justify-center overflow-hidden pb-20 pt-10">
+<div id="Planos" class="flex w-full items-center justify-center gap-14 overflow-hidden pb-20 pt-10">
 	<Separator />
-	<h4 class="rounded-lg border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">Planos</h4>
+	<h4 class="rounded-2xl border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">Planos</h4>
 	<Separator />
 </div>
 
@@ -114,18 +113,21 @@
 	</div>
 </section>
 
-<div id="estrutura-de-rede" class="flex w-full items-center justify-center overflow-hidden py-20">
+<div
+	id="estrutura-de-rede"
+	class="flex w-full items-center justify-center gap-10 overflow-hidden py-20"
+>
 	<Separator />
-	<h4 class="text-nowrap rounded-lg border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">
+	<h4 class="text-nowrap rounded-2xl border bg-[#CB3E38] px-5 py-2 text-2xl font-bold">
 		Estrutura de Rede
 	</h4>
 	<Separator />
 </div>
 
 <!-- Section Estrutura de Rede -->
-<section class="relative flex h-full w-3/5 items-center justify-center">
+<section class="relative mb-14 flex h-full w-3/5 items-center justify-center">
 	<div class="flex w-1/2 flex-col gap-3">
-		<h1 class="mb-3 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
+		<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
 			Plano OSPF
 		</h1>
 		<p class="text-pretty text-xl">
@@ -148,11 +150,7 @@
 		</ul>
 	</div>
 	<div class="flex w-1/2 justify-center gap-5">
-		<CarregaQuandoVisivel
-			src={BackBone}
-			id="BackBone"
-			alt="Imagem de Servidor e BackBone da internet"
-		/>
+		<img src={BackBone} alt="" loading="lazy" />
 	</div>
 </section>
 
@@ -161,7 +159,7 @@
 	class="relative flex h-full w-3/5 flex-row-reverse items-center justify-center"
 >
 	<div class="flex w-1/2 flex-col gap-3">
-		<h1 class="mb-3 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
+		<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
 			Para o seu Servidor :
 		</h1>
 		<p class="text-pretty text-xl">
@@ -187,10 +185,6 @@
 		</ul>
 	</div>
 	<div class="flex w-1/2 justify-center gap-5">
-		<CarregaQuandoVisivel
-			src={ServidorPlano}
-			id="ServidorPlano"
-			alt="Imagem de um Servidor com alguem sentado analisando o status do servidores"
-		/>
+		<img src={ServidorPlano} alt="" loading="lazy" />
 	</div>
 </section>
