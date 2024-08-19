@@ -5,12 +5,12 @@
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 
-	import manGif from '$lib/img/planos/AboutMan.gif';
-	import CDN from '$lib/img/planos/CDN.gif';
-	import BGP from '$lib/img/planos/BGP.gif';
-	import ASN from '$lib/img/planos/ASN.gif';
-	import BackBone from '$lib/img/planos/OSPF.gif';
-	import ServidorPlano from '$lib/img/planos/PlanoServidor.gif';
+	import imgSbre from '$lib/img/imgBest.png';
+	import CDN from '$lib/img/planos/Memory storage.gif';
+	import BGP from '$lib/img/planos/Online world.gif';
+	import ASN from '$lib/img/planos/Secure data.gif';
+	import BackBone from '$lib/img/planos/Server status.gif';
+	import ServidorPlano from '$lib/img/planos/Server(2).gif';
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
@@ -80,12 +80,93 @@
 	<GlobeEx class="w-1/2" />
 </section>
 
-<section id="sobre" class="mb-20 flex h-2/3 w-3/5 items-start justify-center gap-10">
-	<img src={manGif} alt="Online connection" class="w-1/2" loading="lazy" />
+<!-- Section Estrutura de Rede -->
+<div class="flex w-3/5 flex-col text-black">
+	<section class="relative mb-20 flex h-full items-center justify-center">
+		<div class="flex w-1/2 flex-col gap-3">
+			<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
+				Plano OSPF
+			</h1>
+			<p class="text-pretty text-xl">
+				Consideramos este o <span class=" font-semibold text-[#CB3E38]">
+					plano mais importante</span
+				>, pois a estrutura da sua rede é essencial para garantir a
+				<span class=" font-semibold text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
+			</p>
+			<p class="text-pretty text-xl">
+				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
+			</p>
+			<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
+
+			<ul class="flex flex-col items-start justify-start gap-2">
+				{#each networkFeatures as feature}
+					<li class="flex gap-2">
+						<ChevronRight size={20} class="h-4" color="#CB3E38" />
+						{feature}
+					</li>
+				{/each}
+			</ul>
+		</div>
+		<div class="flex w-1/2 justify-center gap-5">
+			<img src={BackBone} alt="" loading="lazy" />
+		</div>
+	</section>
+
+	<section
+		id="estrutura-de-rede"
+		class="relative flex h-full flex-row-reverse items-center justify-center"
+	>
+		<div class="flex w-1/2 flex-col gap-3">
+			<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
+				Para o seu Servidor :
+			</h1>
+			<p class="text-pretty text-xl">
+				Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e
+				máquinas físicas para garantir a
+				<span class=" font-semibold text-[#CB3E38]">melhor gestão</span> para o seu provedor.
+			</p>
+			<p class="text-pretty text-xl">
+				Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.
+			</p>
+			<p class="text-pretty text-xl">
+				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
+			</p>
+			<p class="text-pretty text-xl">Oferecemos:</p>
+
+			<ul class="flex flex-col items-start justify-start gap-2">
+				{#each serverFeatures as feature}
+					<li class="flex gap-2">
+						<ChevronRight size={20} class="h-4" color="#CB3E38" />
+						{feature}
+					</li>
+				{/each}
+			</ul>
+		</div>
+		<div class="flex w-1/2 justify-center gap-5">
+			<img src={ServidorPlano} alt="" loading="lazy" />
+		</div>
+	</section>
+</div>
+
+<!-- Section Planos -->
+<section class="relative flex h-full w-full items-center justify-center py-20">
+	<div class="flex w-3/5 justify-center gap-5">
+		{#each cards as card, index (card.titulo)}
+			<SquareCard {card} />
+		{/each}
+	</div>
+</section>
+
+<!-- Sobre -->
+<section id="sobre" class=" flex h-2/3 w-3/5 items-start justify-center gap-10">
+	<img
+		src={imgSbre}
+		alt="Online connection"
+		class="w-1/2 rounded-2xl shadow-2xl shadow-gray-500"
+		loading="lazy"
+	/>
 	<div class="flex h-[80%] w-2/3 flex-col items-center justify-center gap-5">
-		<h1 class="w-full text-center text-4xl font-bold uppercase underline decoration-[#CB3E38]">
-			Sobre
-		</h1>
+		<h1 class="w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">Sobre</h1>
 		<p class="text-pretty text-center text-xl">
 			Consultoria para provedores de internet e empresas com necessidade de ambiente de servidor
 			estável, seguro e com performance.
@@ -95,96 +176,5 @@
 			Física e Pessoa Jurídica, através de um diagnóstico técnico e preciso, é possível uma
 			percepção imediata na qualidade e performance da rede.
 		</p>
-	</div>
-</section>
-
-<div id="Planos" class="flex w-full items-center justify-center gap-14 overflow-hidden pb-20 pt-10">
-	<Separator />
-	<h4 class="rounded-2xl border bg-[#CB3E38] px-5 py-2 text-2xl font-bold text-white">Planos</h4>
-	<Separator />
-</div>
-
-<!-- Section Planos -->
-<section class="relative flex h-full w-full items-center justify-center">
-	<div class="flex w-3/5 justify-center gap-5">
-		{#each cards as card, index (card.titulo)}
-			<SquareCard {card} />
-		{/each}
-	</div>
-</section>
-
-<div
-	id="estrutura-de-rede"
-	class="flex w-full items-center justify-center gap-10 overflow-hidden py-20"
->
-	<Separator />
-	<h4 class="text-nowrap rounded-2xl border bg-[#CB3E38] px-5 py-2 text-2xl font-bold">
-		Estrutura de Rede
-	</h4>
-	<Separator />
-</div>
-
-<!-- Section Estrutura de Rede -->
-<section class="relative mb-14 flex h-full w-3/5 items-center justify-center">
-	<div class="flex w-1/2 flex-col gap-3">
-		<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
-			Plano OSPF
-		</h1>
-		<p class="text-pretty text-xl">
-			Consideramos este o <span class=" font-semibold text-[#CB3E38]"> plano mais importante</span>,
-			pois a estrutura da sua rede é essencial para garantir a
-			<span class=" font-semibold text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
-		</p>
-		<p class="text-pretty text-xl">
-			Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
-		</p>
-		<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
-
-		<ul class="flex flex-col items-start justify-start gap-2">
-			{#each networkFeatures as feature}
-				<li class="flex gap-2">
-					<ChevronRight size={20} class="h-4" color="#CB3E38" />
-					{feature}
-				</li>
-			{/each}
-		</ul>
-	</div>
-	<div class="flex w-1/2 justify-center gap-5">
-		<img src={BackBone} alt="" loading="lazy" />
-	</div>
-</section>
-
-<section
-	id="estrutura-de-rede"
-	class="relative flex h-full w-3/5 flex-row-reverse items-center justify-center"
->
-	<div class="flex w-1/2 flex-col gap-3">
-		<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
-			Para o seu Servidor :
-		</h1>
-		<p class="text-pretty text-xl">
-			Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e máquinas
-			físicas para garantir a <span class=" font-semibold text-[#CB3E38]">melhor gestão</span> para o
-			seu provedor.
-		</p>
-		<p class="text-pretty text-xl">
-			Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.
-		</p>
-		<p class="text-pretty text-xl">
-			Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
-		</p>
-		<p class="text-pretty text-xl">Oferecemos:</p>
-
-		<ul class="flex flex-col items-start justify-start gap-2">
-			{#each serverFeatures as feature}
-				<li class="flex gap-2">
-					<ChevronRight size={20} class="h-4" color="#CB3E38" />
-					{feature}
-				</li>
-			{/each}
-		</ul>
-	</div>
-	<div class="flex w-1/2 justify-center gap-5">
-		<img src={ServidorPlano} alt="" loading="lazy" />
 	</div>
 </section>
