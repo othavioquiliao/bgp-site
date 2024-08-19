@@ -3,7 +3,7 @@
 	import { Motion, useAnimation } from 'svelte-motion';
 
 	export let width = 'fit-content';
-	export let boxColor = '#5046e6';
+	export let boxColor = '#CB3E38';
 	export let duration = 0.5;
 
 	// Animation Controls

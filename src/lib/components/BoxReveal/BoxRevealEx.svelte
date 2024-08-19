@@ -5,23 +5,23 @@
 	import BoxReveal from './BoxReveal.svelte';
 </script>
 
-<div class="h-full w-full max-w-[32rem] items-center justify-center overflow-hidden pt-8">
+<div class="max-w-1/2 h-full w-full items-center justify-center overflow-hidden pt-8 text-black">
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<p class="select-none text-[3.5rem] font-semibold">
+		<p class="select-none font-semibold md:text-5xl xl:text-7xl">
 			Sua Empresa esta Preparada
 			<span class="font-semibold text-[#CB3E38]">?</span>
 		</p>
 	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<h2 class="mt-[.5rem] select-none text-[1rem]">
+		<h2 class="mt-[.5rem] select-none text-xl">
 			Para grande revolução do IPv6 com a
-			<span class="font-semibold font-semibold text-[#CB3E38]">BGP Consultoria</span>
+			<span class="font-semibold text-[#CB3E38]">BGP Consultoria</span>
 		</h2>
 	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<div class="mt-[1rem] select-none space-y-2">
+		<div class="mt-[1rem] select-none space-y-2 text-xl">
 			<div class="flex items-start justify-start">
 				<ChevronRight color="#CB3E38" size={50} class="h-5" />
 				<p>
@@ -48,6 +48,8 @@
 	>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<Button class="mt-[1.6rem] w-48 bg-[#CB3E38] text-white">Saiba Mais</Button>
+		<Button class="text-md mt-[1.6rem] w-48 bg-[#CB3E38] text-white hover:bg-secondary"
+			>Saiba Mais</Button
+		>
 	</BoxReveal>
 </div>

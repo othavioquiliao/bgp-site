@@ -140,7 +140,7 @@
 		</p>
 		<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
 
-		<ul class="flex flex-col items-start justify-start gap-2 text-gray-100">
+		<ul class="flex flex-col items-start justify-start gap-2">
 			{#each networkFeatures as feature}
 				<li class="flex gap-2">
 					<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -175,7 +175,7 @@
 		</p>
 		<p class="text-pretty text-xl">Oferecemos:</p>
 
-		<ul class="flex flex-col items-start justify-start gap-2 text-gray-100">
+		<ul class="flex flex-col items-start justify-start gap-2">
 			{#each serverFeatures as feature}
 				<li class="flex gap-2">
 					<ChevronRight size={20} class="h-4" color="#CB3E38" />

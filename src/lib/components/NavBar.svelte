@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Logo from '$lib/img/BGP-branco.png';
+	import Logo from '$lib/img/logo.png';
 	import Button from './ui/button/button.svelte';
 	let scrollY: number;
 </script>
