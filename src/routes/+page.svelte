@@ -1,13 +1,11 @@
 <script lang="ts">
-	import Button from '$lib/components/ui/button/button.svelte';
 	import GlobeEx from '$lib/components/Globe.svelte';
 	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealEx.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
-	import Separator from '$lib/components/ui/separator/separator.svelte';
 
 	import imgSbre from '$lib/img/imgBest.png';
-	import CDN from '$lib/img/planos/Memory storage.gif';
-	import BGP from '$lib/img/planos/Online world.gif';
+	import CDN from '$lib/img/planos/Memory storage(1).gif';
+	import BGP from '$lib/img/planos/Online world(1).gif';
 	import ASN from '$lib/img/planos/Secure data.gif';
 	import BackBone from '$lib/img/planos/Server status.gif';
 	import ServidorPlano from '$lib/img/planos/Server(2).gif';
