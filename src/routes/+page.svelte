@@ -77,7 +77,7 @@
 
 <svelte:window bind:scrollY />
 
-<section class="flex h-full min-h-full w-4/5 items-center justify-center">
+<section class="flex h-full min-h-full w-full items-center justify-around">
 	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/2">
 		<BoxRevealEx />
 	</div>
@@ -91,7 +91,7 @@
 	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="font-inter mb-5 w-full text-center text-4xl font-semibold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
 			>
 				Plano OSPF
 			</h1>
@@ -128,9 +128,9 @@
 	>
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="font-inter mb-5 w-full text-center text-4xl font-semibold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
 			>
-				Para o seu Servidor
+				Plano Servidor
 			</h1>
 			<p class="text-pretty indent-5 text-xl">
 				Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e
