@@ -7,7 +7,7 @@
 
 <div class="max-w-1/2 h-full w-full items-center justify-center overflow-hidden pt-8 text-black">
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<p class="select-none font-inter font-semibold md:text-5xl xl:text-7xl">
+		<p class="select-none font-inter font-semibold md:text-5xl xl:text-6xl">
 			Sua empresa está preparada
 			<span class="font-semibold text-[#CB3E38]">?</span>
 		</p>
