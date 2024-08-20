@@ -24,9 +24,9 @@
 			img: CDN,
 			titulo: 'Plano CDN',
 			topicos: [
-				'Solicitações de CNDs.',
+				'Solicitações de CDNs.',
 				'Peering com Google, Netflix e Facebook.',
-				'Configuração de router dedicado para peering.',
+				'Configuração de roteador dedicado para peering.',
 				'Suporte completo em todo o processo.'
 			]
 		},
@@ -59,7 +59,8 @@
 		'Reestruturação do Core com ativação de PE e CE',
 		'Redundância',
 		'VLAN, MPLS, VPLS',
-		'Política de redistribuição baseada em redes declaradas; Pilha dupla IPv4/IPv6'
+		'Política de redistribuição baseada em redes declaradas',
+		'Pilha dupla IPv4/IPv6'
 	];
 
 	let serverFeatures = [
@@ -83,18 +84,18 @@
 	<GlobeEx class="w-1/2" />
 </section>
 
-<!-- Pegar valor do scroll -->
+<!-- Obter valor do scroll -->
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl">{scrollY}</h1> -->
-<!-- Section Estrutura de Rede -->
+<!-- Seção Estrutura de Rede -->
 <div class="flex w-3/5 flex-col text-black">
-	<section class="relative mb-20 flex h-full items-center justify-center">
+	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
 				class="font-inter mb-5 w-full text-center text-4xl font-semibold underline decoration-[#CB3E38]"
 			>
 				Plano OSPF
 			</h1>
-			<p class="text-pretty text-xl">
+			<p class="break-before-right text-pretty indent-5 text-xl">
 				Consideramos este o <span class=" font-semibold text-[#CB3E38]">
 					plano mais importante</span
 				>, pois a estrutura da sua rede é essencial para garantir a
@@ -105,7 +106,7 @@
 			</p>
 			<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
 
-			<ul class="flex flex-col items-start justify-start gap-2">
+			<ul class="flex flex-col items-start justify-start gap-2 text-lg">
 				{#each networkFeatures as feature}
 					<li class="flex gap-2">
 						<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -131,20 +132,20 @@
 			>
 				Para o seu Servidor
 			</h1>
-			<p class="text-pretty text-xl">
+			<p class="text-pretty indent-5 text-xl">
 				Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e
 				máquinas físicas para garantir a
 				<span class=" font-semibold text-[#CB3E38]">melhor gestão</span> para o seu provedor.
 			</p>
-			<p class="text-pretty text-xl">
+			<p class="text-pretty indent-5 text-xl">
 				Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.
 			</p>
-			<p class="text-pretty text-xl">
+			<p class="text-pretty indent-5 text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 			</p>
 			<p class="text-pretty text-xl">Oferecemos:</p>
 
-			<ul class="flex flex-col items-start justify-start gap-2">
+			<ul class="flex flex-col items-start justify-start gap-2 text-lg">
 				{#each serverFeatures as feature}
 					<li class="flex gap-2">
 						<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -161,7 +162,7 @@
 	</section>
 </div>
 
-<!-- Section Planos -->
+<!-- Seção Planos -->
 <section class="relative flex h-full w-full items-center justify-center py-20">
 	<div class="flex w-3/5 justify-center gap-5">
 		{#if scrollY > 1250}
