@@ -77,8 +77,8 @@
 
 <svelte:window bind:scrollY />
 
-<section class="flex h-full min-h-full w-full items-center justify-around">
-	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/2">
+<section class="flex h-full min-h-full w-full items-center justify-center">
+	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/3">
 		<BoxRevealEx />
 	</div>
 	<GlobeEx class="w-1/2" />
