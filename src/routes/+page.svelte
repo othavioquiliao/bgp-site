@@ -174,7 +174,7 @@
 </section>
 
 <!-- Sobre -->
-<section id="sobre" class=" flex h-2/3 w-3/5 items-start justify-center gap-10">
+<!-- <section id="sobre" class=" flex h-2/3 w-3/5 items-start justify-center gap-10">
 	<img
 		src={imgSbre}
 		alt="Online connection"
@@ -193,4 +193,4 @@
 			percepção imediata na qualidade e performance da rede.
 		</p>
 	</div>
-</section>
+</section> -->
