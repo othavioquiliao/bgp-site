@@ -54,8 +54,13 @@ const config: Config = {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+
 			fontFamily: {
-				sans: [...fontFamily.sans]
+				sans: ['Roboto', ...fontFamily.sans],
+				roboto: ['Roboto', ...fontFamily.sans],
+				serif: ['Merriweather', ...fontFamily.serif],
+				mono: ['Roboto Mono', ...fontFamily.mono],
+				inter: ['Inter', ...fontFamily.sans]
 			}
 		}
 	}

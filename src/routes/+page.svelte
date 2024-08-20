@@ -4,13 +4,14 @@
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 
 	import imgSbre from '$lib/img/imgBest.png';
-	import CDN from '$lib/img/planos/Memory storage(1).gif';
-	import BGP from '$lib/img/planos/Online world(1).gif';
-	import ASN from '$lib/img/planos/Secure data.gif';
+	import CDN from '$lib/img/planos/Memory storage.gif';
+	import BGP from '$lib/img/planos/Secure data.gif';
+	import ASN from '$lib/img/planos/Connected world.gif';
 	import BackBone from '$lib/img/planos/Server status.gif';
-	import ServidorPlano from '$lib/img/planos/Server(2).gif';
+	import ServidorPlano from '$lib/img/planos/Server.gif';
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
+	import { fade } from 'svelte/transition';
 
 	interface Card {
 		img: string;
@@ -69,7 +70,11 @@
 		'Servidor para OLT',
 		'Disponibilidade de adicionar espaço para o seu sistema de gerência!'
 	];
+
+	let scrollY: any;
 </script>
+
+<svelte:window bind:scrollY />
 
 <section class="flex h-full min-h-full w-4/5 items-center justify-center">
 	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/2">
@@ -78,11 +83,14 @@
 	<GlobeEx class="w-1/2" />
 </section>
 
+<h1 class="fixed right-40 top-40 z-20 bg-white text-5xl">{scrollY}</h1>
 <!-- Section Estrutura de Rede -->
 <div class="flex w-3/5 flex-col text-black">
 	<section class="relative mb-20 flex h-full items-center justify-center">
 		<div class="flex w-1/2 flex-col gap-3">
-			<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
+			<h1
+				class="font-inter mb-5 w-full text-center text-4xl font-semibold underline decoration-[#CB3E38]"
+			>
 				Plano OSPF
 			</h1>
 			<p class="text-pretty text-xl">
@@ -106,7 +114,9 @@
 			</ul>
 		</div>
 		<div class="flex w-1/2 justify-center gap-5">
-			<img src={BackBone} alt="" loading="lazy" />
+			{#if scrollY > 150}
+				<img src={BackBone} alt="" loading="lazy" transition:fade={{ delay: -20, duration: 0 }} />
+			{/if}
 		</div>
 	</section>
 
@@ -115,8 +125,10 @@
 		class="relative flex h-full flex-row-reverse items-center justify-center"
 	>
 		<div class="flex w-1/2 flex-col gap-3">
-			<h1 class="mb-5 w-full text-center text-4xl font-bold underline decoration-[#CB3E38]">
-				Para o seu Servidor :
+			<h1
+				class="font-inter mb-5 w-full text-center text-4xl font-semibold underline decoration-[#CB3E38]"
+			>
+				Para o seu Servidor
 			</h1>
 			<p class="text-pretty text-xl">
 				Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e
@@ -141,7 +153,9 @@
 			</ul>
 		</div>
 		<div class="flex w-1/2 justify-center gap-5">
-			<img src={ServidorPlano} alt="" loading="lazy" />
+			{#if scrollY > 650}
+				<img src={ServidorPlano} alt="Plano de Servidor" loading="lazy" />
+			{/if}
 		</div>
 	</section>
 </div>
@@ -149,9 +163,11 @@
 <!-- Section Planos -->
 <section class="relative flex h-full w-full items-center justify-center py-20">
 	<div class="flex w-3/5 justify-center gap-5">
-		{#each cards as card, index (card.titulo)}
-			<SquareCard {card} />
-		{/each}
+		{#if scrollY > 1250}
+			{#each cards as card, index (card.titulo)}
+				<SquareCard {card} />
+			{/each}
+		{/if}
 	</div>
 </section>
 

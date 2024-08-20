@@ -7,15 +7,15 @@
 
 <div class="max-w-1/2 h-full w-full items-center justify-center overflow-hidden pt-8 text-black">
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<p class="select-none font-semibold md:text-5xl xl:text-7xl">
-			Sua Empresa esta Preparada
+		<p class="font-inter select-none font-semibold md:text-5xl xl:text-7xl">
+			Sua empresa está preparada
 			<span class="font-semibold text-[#CB3E38]">?</span>
 		</p>
 	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
 		<h2 class="mt-[.5rem] select-none text-xl">
-			Para grande revolução do IPv6 com a
+			Para a grande revolução do IPv6 com a
 			<span class="font-semibold text-[#CB3E38]">BGP Consultoria</span>
 		</h2>
 	</BoxReveal>
@@ -44,11 +44,12 @@
 					>, seja pontual ou por meio de planos.
 				</p>
 			</div>
-		</div></BoxReveal
-	>
+		</div>
+	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<Button class="text-md mt-[1.6rem] w-48 bg-[#CB3E38] text-white hover:bg-secondary"
+		<Button
+			class="text-md font-inter mt-[1.6rem] w-48 border border-opacity-0 bg-[#CB3E38] text-white hover:border-[#CB3E38] hover:bg-background hover:text-[#CB3E38]"
 			>Saiba Mais</Button
 		>
 	</BoxReveal>

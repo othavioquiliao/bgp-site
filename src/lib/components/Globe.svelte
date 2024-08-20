@@ -41,13 +41,13 @@
 			height: width,
 			phi: 0,
 			theta: 0.0,
-			dark: -7, // -0.5
-			diffuse: -2, // 1.2
-			mapSamples: 18000,
-			mapBrightness: 6, // 6
-			baseColor: [0.122, 0.122, 0.122],
+			dark: 0, // -0.5
+			diffuse: 1.2, // 1.2
+			mapSamples: 8000,
+			mapBrightness: 10, // 6
+			baseColor: [0.85, 0.85, 0.85],
 			markerColor: [203 / 255, 62 / 255, 56 / 255],
-			glowColor: [0.7, 0.7, 0.7],
+			glowColor: [0.53, 0.53, 0.53],
 			markers: [
 				{ location: [14.5995, 120.9842], size: 0.03 },
 				{ location: [19.076, 72.8777], size: 0.03 },
@@ -56,7 +56,7 @@
 				{ location: [39.9042, 116.4074], size: 0.08 },
 				{ location: [-23.5505, -46.6333], size: 0.05 },
 				{ location: [19.4326, -99.1332], size: 0.04 },
-				{ location: [40.7128, -74.006], size: 0.1 },
+				{ location: [40.5128, -74.006], size: 0.1 },
 				{ location: [34.6937, 135.5022], size: 0.05 },
 				{ location: [41.0082, 28.9784], size: 0.06 }
 			],

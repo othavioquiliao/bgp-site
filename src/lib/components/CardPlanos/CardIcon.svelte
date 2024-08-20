@@ -11,7 +11,7 @@
 	viewBox="0 0 24 24"
 	width={24}
 	height={24}
-	stroke-width="1"
+	stroke-width="5"
 	stroke-linecap="round"
 	stroke="currentColor"
 	class={cn('absolute font-bold text-[#CB3E38]  ', className)}

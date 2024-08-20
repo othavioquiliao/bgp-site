@@ -12,13 +12,13 @@
 		<Button
 			variant="link"
 			href="/"
-			class=" font-sans text-base font-bold  underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
+			class=" font-inter text-base font-bold underline  decoration-[#CA3438] decoration-2  hover:scale-110 hover:decoration-black md:text-2xl"
 			>Home</Button
 		>
 		<Button
 			variant="link"
 			href="#Planos"
-			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
+			class=" font-inter text-base font-bold underline  decoration-[#CA3438] decoration-2  hover:scale-110 hover:decoration-black md:text-2xl"
 			>Planos</Button
 		>
 	</div>
@@ -27,8 +27,8 @@
 		<img
 			src={Logo}
 			alt="Logo BGS consultoria"
-			class="{`w-20 transform transition-transform duration-500 ease-in-out hover:scale-110 ${
-				scrollY === 0 ? ' scale-150 pt-2 ' : ''
+			class="{`w-20 transform pt-2 transition-transform duration-500 ease-in-out hover:scale-110 ${
+				scrollY === 0 ? ' scale-[2] pt-5 ' : ''
 			}`}}"
 		/>
 	</a>
@@ -36,13 +36,13 @@
 		<Button
 			variant="link"
 			href="#estrutura-de-rede"
-			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
+			class=" font-inter text-base font-bold underline  decoration-[#CA3438] decoration-2  hover:scale-110 hover:decoration-black md:text-2xl"
 			>Estrutura de Rede</Button
 		>
 		<Button
 			variant="link"
 			href="/login"
-			class=" font-sans text-base font-bold underline decoration-[#CA3438] hover:decoration-white lg:text-xl"
+			class=" font-inter text-base font-bold underline  decoration-[#CA3438] decoration-2  hover:scale-110 hover:decoration-black md:text-2xl"
 			>Contato</Button
 		>
 	</div>
