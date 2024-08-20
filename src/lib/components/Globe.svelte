@@ -44,10 +44,10 @@
 			dark: 0, // -0.5
 			diffuse: 1.2, // 1.2
 			mapSamples: 8000,
-			mapBrightness: 10, // 6
-			baseColor: [0.85, 0.85, 0.85],
+			mapBrightness: 6, // 6
+			baseColor: [0.88, 0.88, 0.88],
 			markerColor: [203 / 255, 62 / 255, 56 / 255],
-			glowColor: [0.53, 0.53, 0.53],
+			glowColor: [0.559, 0.559, 0.559],
 			markers: [
 				{ location: [14.5995, 120.9842], size: 0.03 },
 				{ location: [19.076, 72.8777], size: 0.03 },

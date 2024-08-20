@@ -83,7 +83,8 @@
 	<GlobeEx class="w-1/2" />
 </section>
 
-<h1 class="fixed right-40 top-40 z-20 bg-white text-5xl">{scrollY}</h1>
+<!-- Pegar valor do scroll -->
+<!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl">{scrollY}</h1> -->
 <!-- Section Estrutura de Rede -->
 <div class="flex w-3/5 flex-col text-black">
 	<section class="relative mb-20 flex h-full items-center justify-center">
