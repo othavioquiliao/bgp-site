@@ -1,9 +1,9 @@
 <script lang="ts">
-	import GlobeEx from '$lib/components/Globe.svelte';
-	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealEx.svelte';
+	// import GlobeEx from '$lib/components/Globe.svelte';
+	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealExemp.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 
-	import imgSbre from '$lib/img/imgBest.png';
+	import imgSobre from '$lib/img/imgBest.png';
 	import CDN from '$lib/img/planos/Memory storage.gif';
 	import BGP from '$lib/img/planos/Secure data.gif';
 	import ASN from '$lib/img/planos/Connected world.gif';
@@ -12,6 +12,7 @@
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
+	import WordFadeIn from '$lib/components/BoxReveal/WordFadeIn.svelte';
 
 	interface Card {
 		img: string;
@@ -78,10 +79,15 @@
 <svelte:window bind:scrollY />
 
 <section class="flex h-full min-h-full w-full items-center justify-center">
-	<div class="flex select-none flex-col items-start justify-center gap-2 md:w-1/3">
-		<BoxRevealEx />
+	<div class="flex flex-col items-center justify-center">
+		<!-- <BoxRevealEx /> -->
+		<WordFadeIn words="Sua empresa está preparada ?" />
+		<h2 class="mt-[.5rem] text-2xl">
+			Para a grande revolução do IPv6 com a
+			<span class="font-semibold text-[#CB3E38]">BGP Consultoria</span>
+		</h2>
 	</div>
-	<GlobeEx class="w-1/2" />
+	<!-- <GlobeEx class="w-1/2" /> -->
 </section>
 
 <!-- Obter valor do scroll -->
@@ -176,7 +182,7 @@
 <!-- Sobre -->
 <!-- <section id="sobre" class=" flex h-2/3 w-3/5 items-start justify-center gap-10">
 	<img
-		src={imgSbre}
+		src={imgSobre}
 		alt="Online connection"
 		class="w-1/2 rounded-2xl shadow-2xl shadow-gray-500"
 		loading="lazy"

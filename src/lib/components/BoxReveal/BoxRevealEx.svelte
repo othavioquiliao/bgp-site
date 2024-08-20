@@ -5,9 +5,9 @@
 	import BoxReveal from './BoxReveal.svelte';
 </script>
 
-<div class="max-w-1/2 h-full w-full items-center justify-center overflow-hidden pt-8 text-black">
+<div class="  flex h-full w-full flex-col items-center justify-center text-black">
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<p class="select-none font-inter font-semibold md:text-5xl xl:text-7xl">
+		<p class="select-none font-inter text-7xl font-semibold">
 			Sua empresa está preparada
 			<span class="font-semibold text-[#CB3E38]">?</span>
 		</p>
@@ -21,8 +21,10 @@
 	</BoxReveal>
 
 	<BoxReveal boxColor={'#CB3E38'} duration={0.5}>
-		<div class="mt-[1rem] w-4/5 select-none space-y-2 text-xl">
-			<div class="flex items-start justify-start">
+		<div
+			class="mt-[1rem] flex w-1/2 select-none flex-col items-center justify-center space-y-2 text-center text-xl"
+		>
+			<div class="flex items-center justify-start">
 				<ChevronRight color="#CB3E38" size={50} class="h-5" />
 				<p>
 					Preparamos sua rede para suportar o crescente número de acessos à internet, com foco em <span
@@ -33,7 +35,7 @@
 				</p>
 				<br />
 			</div>
-			<div class="flex items-start justify-start">
+			<div class="flex items-center justify-start">
 				<ChevronRight color="#CB3E38" size={50} class="h-5" />
 				<p>
 					Fazemos isso com
