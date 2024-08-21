@@ -4,6 +4,6 @@
 	import { ModeWatcher } from 'mode-watcher';
 </script>
 
-<ModeWatcher defaultMode="light" />
+<ModeWatcher defaultMode="dark" />
 <NavBar />
 <main class="flex h-screen w-full flex-col items-center"><slot /></main>

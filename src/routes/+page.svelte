@@ -1,19 +1,20 @@
 <script lang="ts">
 	// import GlobeEx from '$lib/components/Globe.svelte';
-	import BoxRevealEx from '$lib/components/BoxReveal/BoxRevealExemp.svelte';
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 
 	import imgSobre from '$lib/img/imgBest.png';
-	import CDN from '$lib/img/planos/Memory storage.gif';
-	import BGP from '$lib/img/planos/Secure data.gif';
-	import ASN from '$lib/img/planos/Connected world.gif';
-	import BackBone from '$lib/img/planos/Server status.gif';
-	import ServidorPlano from '$lib/img/planos/Server.gif';
+	import CDN from '$lib/img/planos/Memory storage(5).gif';
+	import BGP from '$lib/img/planos/Secure data(4).gif';
+	import ASN from '$lib/img/planos/Connected world(3).gif';
+	import BackBone from '$lib/img/planos/Server status(4).gif';
+	import ServidorPlano from '$lib/img/planos/Server(4).gif';
+	import mainImg from '$lib/img/img1.webp';
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
-	import WordFadeIn from '$lib/components/BoxReveal/WordFadeIn.svelte';
+	import WordPullUp from '$lib/components/BoxReveal/WordPullUp.svelte';
 
+	//
 	interface Card {
 		img: string;
 		titulo: string;
@@ -78,22 +79,23 @@
 
 <svelte:window bind:scrollY />
 
-<section class="flex h-full min-h-full w-full items-center justify-center">
-	<div class="flex flex-col items-center justify-center">
+<section class="flex h-full min-h-full w-full items-center justify-center bg-blend-color-burn">
+	<div class="z-10 flex flex-col items-center justify-center">
 		<!-- <BoxRevealEx /> -->
-		<WordFadeIn words="Sua empresa está preparada ?" />
-		<h2 class="mt-[.5rem] text-2xl">
-			Para a grande revolução do IPv6 com a
-			<span class="font-semibold text-[#CB3E38]">BGP Consultoria</span>
+		<WordPullUp words="Tecnologia & Inovação" velocidade={0.25} />
+		<WordPullUp words="para Melhor Performance" velocidade={0.75} />
+
+		<h2 class="mt-[.5rem] text-2xl text-white">
+			Consultoria para Provedores de Internet e Grandes Empresas
 		</h2>
 	</div>
-	<!-- <GlobeEx class="w-1/2" /> -->
+	<img src={mainImg} alt="" class="absolute w-full blur-sm" loading="eager" />
 </section>
 
 <!-- Obter valor do scroll -->
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl">{scrollY}</h1> -->
 <!-- Seção Estrutura de Rede -->
-<div class="flex w-3/5 flex-col text-black">
+<div class="flex w-3/5 flex-col pt-16 text-white">
 	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
@@ -101,7 +103,7 @@
 			>
 				Plano OSPF
 			</h1>
-			<p class="break-before-right text-pretty indent-5 text-xl">
+			<p class="break-before-right text-pretty text-xl">
 				Consideramos este o <span class=" font-semibold text-[#CB3E38]">
 					plano mais importante</span
 				>, pois a estrutura da sua rede é essencial para garantir a
@@ -138,15 +140,15 @@
 			>
 				Plano Servidor
 			</h1>
-			<p class="text-pretty indent-5 text-xl">
+			<p class="text-pretty text-xl">
 				Temos <span class=" font-semibold text-[#CB3E38]">soluções em virtualização</span> e
 				máquinas físicas para garantir a
 				<span class=" font-semibold text-[#CB3E38]">melhor gestão</span> para o seu provedor.
 			</p>
-			<p class="text-pretty indent-5 text-xl">
+			<p class="text-pretty text-xl">
 				Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.
 			</p>
-			<p class="text-pretty indent-5 text-xl">
+			<p class="text-pretty text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 			</p>
 			<p class="text-pretty text-xl">Oferecemos:</p>
