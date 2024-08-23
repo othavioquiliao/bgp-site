@@ -2,7 +2,6 @@
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import WordPullUp from '$lib/components/BoxReveal/WordPullUp.svelte';
 
-	import imgSobre from '$lib/img/imgBest.png';
 	import CDN from '$lib/img/planos/Memory storage(5).gif';
 	import BGP from '$lib/img/planos/Secure data(4).gif';
 	import ASN from '$lib/img/planos/Connected world(3).gif';
@@ -14,6 +13,7 @@
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
+	import SectionDiferenciais from '$lib/components/SectionDiferenciais.svelte';
 
 	interface Card {
 		img: string;
@@ -90,7 +90,7 @@
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl text-black">{scrollY}</h1> -->
 
 <section
-	class="bg-[ flex h-full min-h-full w-full select-none items-center justify-center bg-cover bg-center bg-no-repeat object-cover"
+	class="bg-[ mb-10 flex h-full min-h-full w-full select-none items-center justify-center bg-cover bg-center bg-no-repeat object-cover"
 	style={`background-image: url(${mainImg});`}
 >
 	<div class="z-10 flex flex-col items-center justify-center">
@@ -103,18 +103,25 @@
 	</div>
 </section>
 
+<div class="flex h-full w-full flex-col items-center justify-center">
+	<h1 class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]">
+		Diferenciais
+	</h1>
+	<SectionDiferenciais />
+</div>
+
 <div class="flex w-3/5 flex-col pt-16 text-white">
 	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
 			>
 				Plano OSPF
 			</h1>
 			<p class="break-before-right text-pretty text-xl">
-				Consideramos este o <span class="font-semibold text-[#CB3E38]">plano mais importante</span>,
+				Consideramos este o <span class="font-bold text-[#CB3E38]">plano mais importante</span>,
 				pois a estrutura da sua rede é essencial para garantir a
-				<span class="font-semibold text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
+				<span class="font-bold text-[#CB3E38]">qualidade do produto</span> entregue ao cliente final.
 			</p>
 			<p class="text-pretty text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
@@ -149,14 +156,14 @@
 	>
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
 			>
 				Plano Servidor
 			</h1>
 			<p class="text-pretty text-xl">
-				Temos <span class="font-semibold text-[#CB3E38]">soluções em virtualização</span> e máquinas
-				físicas para garantir a <span class="font-semibold text-[#CB3E38]">melhor gestão</span> para
-				o seu provedor.
+				Temos <span class="font-bold text-[#CB3E38]">soluções em virtualização</span> e máquinas
+				físicas para garantir a <span class="font-bold text-[#CB3E38]">melhor gestão</span> para o seu
+				provedor.
 			</p>
 			<p class="text-pretty text-xl">
 				Focamos em otimização e confiabilidade, atendendo às necessidades específicas da sua rede.
@@ -197,17 +204,17 @@
 	<section class="relative flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
 			>
 				Plano Monitoramento
 			</h1>
 			<p class="break-before-right text-pretty text-xl">
-				Nossa equipe monitora sua rede de forma contínua, <span class="font-semibold text-[#CB3E38]"
+				Nossa equipe monitora sua rede de forma contínua, <span class="font-bold text-[#CB3E38]"
 					>garantindo</span
 				>
 				a estabilidade ao agir prontamente em casos de falhas,
-				<span class="font-semibold text-[#CB3E38]">otimizando o uso de equipamentos</span>
-				e mantendo o <span class="font-semibold text-[#CB3E38]">desempenho</span> dos servidores e roteadores
+				<span class="font-bold text-[#CB3E38]">otimizando o uso de equipamentos</span>
+				e mantendo o <span class="font-bold text-[#CB3E38]">desempenho</span> dos servidores e roteadores
 				no máximo.
 			</p>
 			<p class="text-pretty text-xl">
@@ -242,19 +249,18 @@
 		class=" flex h-full flex-row-reverse items-center justify-center gap-10"
 	>
 		<div class="flex w-1/2 flex-col items-center gap-5 text-center">
-			<h1 class="mb-2 w-full font-inter text-4xl font-semibold underline decoration-[#CB3E38]">
+			<h1 class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38]">
 				Plano Custom
 			</h1>
 			<p class="text-pretty text-xl">
-				Desenvolvido <span class="font-semibold text-[#CB3E38]">exclusivamente</span> para sua
-				empresa,
-				<span class="font-semibold text-[#CB3E38]">completamente adaptável</span> às suas necessidades.
+				Desenvolvido <span class="font-bold text-[#CB3E38]">exclusivamente</span> para sua empresa,
+				<span class="font-bold text-[#CB3E38]">completamente adaptável</span> às suas necessidades.
 			</p>
 			<p class="text-pretty text-xl">
-				Nós moldamos nossos serviços para <span class="font-semibold text-[#CB3E38]">garantir</span>
-				que você receba exatamente o <span class="font-semibold text-[#CB3E38]">suporte</span> que
+				Nós moldamos nossos serviços para <span class="font-bold text-[#CB3E38]">garantir</span>
+				que você receba exatamente o <span class="font-bold text-[#CB3E38]">suporte</span> que
 				precisa, de forma
-				<span class="font-semibold text-[#CB3E38]">personalizada e eficiente</span>.
+				<span class="font-bold text-[#CB3E38]">personalizada e eficiente</span>.
 			</p>
 		</div>
 		<div class="flex min-h-[33rem] w-1/2 justify-center gap-5">
