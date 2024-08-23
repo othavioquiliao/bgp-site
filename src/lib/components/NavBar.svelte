@@ -7,7 +7,7 @@
 <svelte:window bind:scrollY />
 <nav
 	class="fixed z-20 flex h-16 w-full items-center justify-between bg-gradient-to-b {scrollY > 900
-		? 'from-background   from-25% to-transparent'
+		? 'from-background  from-25% to-transparent'
 		: ''}"
 >
 	<div class="flex w-1/3 items-center justify-evenly">

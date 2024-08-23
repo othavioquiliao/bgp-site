@@ -89,16 +89,18 @@
 
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl text-black">{scrollY}</h1> -->
 
-<section class="flex h-full min-h-full w-full items-center justify-center bg-blend-color-burn">
+<section
+	class="bg-[ flex h-full min-h-full w-full select-none items-center justify-center bg-cover bg-center bg-no-repeat object-cover"
+	style={`background-image: url(${mainImg});`}
+>
 	<div class="z-10 flex flex-col items-center justify-center">
-		<WordPullUp words="Tecnologia & Inovação" velocidade={0.25} />
-		<WordPullUp words="para Melhor Performance" velocidade={0.75} />
+		<WordPullUp words="Tecnologia & Inovação" velocidade={0.35} />
+		<WordPullUp words="para Melhor Performance" velocidade={0.55} />
 
-		<h2 class="mt-[.5rem] text-2xl text-white">
+		<h2 class="mt-[.5rem] flex items-center gap-3 text-2xl text-white">
 			Consultoria para Provedores de Internet e Grandes Empresas
 		</h2>
 	</div>
-	<img src={mainImg} alt="" class="absolute w-full blur-sm" loading="eager" />
 </section>
 
 <div class="flex w-3/5 flex-col pt-16 text-white">
@@ -130,7 +132,13 @@
 		</div>
 		<div class="flex w-1/2 justify-center gap-5">
 			{#if scrollY > 150}
-				<img src={BackBone} alt="" loading="lazy" transition:fade={{ delay: 0, duration: 300 }} />
+				<img
+					src={BackBone}
+					alt=""
+					loading="lazy"
+					class="select-none"
+					transition:fade={{ delay: 0, duration: 300 }}
+				/>
 			{/if}
 		</div>
 	</section>
@@ -169,7 +177,7 @@
 		</div>
 		<div class="flex w-1/2 justify-center gap-5">
 			{#if scrollY > 650}
-				<img src={ServidorPlano} alt="Plano de Servidor" loading="lazy" />
+				<img src={ServidorPlano} alt="Plano de Servidor" loading="lazy" class="select-none" />
 			{/if}
 		</div>
 	</section>
@@ -222,6 +230,7 @@
 					src={monitoramentoImg}
 					alt="Plano Monitoramento"
 					loading="lazy"
+					class="select-none"
 					transition:fade={{ delay: 0, duration: 300 }}
 				/>
 			{/if}
@@ -230,19 +239,16 @@
 
 	<section
 		id="estrutura-de-rede"
-		class="relative flex h-full flex-row-reverse items-center justify-center"
+		class=" flex h-full flex-row-reverse items-center justify-center gap-10"
 	>
-		<div class="flex w-1/2 flex-col items-center gap-3">
-			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-semibold underline decoration-[#CB3E38]"
-			>
+		<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+			<h1 class="mb-2 w-full font-inter text-4xl font-semibold underline decoration-[#CB3E38]">
 				Plano Custom
 			</h1>
 			<p class="text-pretty text-xl">
 				Desenvolvido <span class="font-semibold text-[#CB3E38]">exclusivamente</span> para sua
-				empresa, este plano é
-				<span class="font-semibold text-[#CB3E38]">completamente adaptável</span> às suas necessidades
-				específicas.
+				empresa,
+				<span class="font-semibold text-[#CB3E38]">completamente adaptável</span> às suas necessidades.
 			</p>
 			<p class="text-pretty text-xl">
 				Nós moldamos nossos serviços para <span class="font-semibold text-[#CB3E38]">garantir</span>
@@ -253,7 +259,7 @@
 		</div>
 		<div class="flex min-h-[33rem] w-1/2 justify-center gap-5">
 			{#if scrollY > 2980}
-				<img src={customImg} alt="Plano Custom" loading="lazy" />
+				<img src={customImg} alt="Plano Custom" loading="lazy" class="select-none" />
 			{/if}
 		</div>
 	</section>
