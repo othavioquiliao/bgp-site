@@ -38,7 +38,7 @@
 	];
 </script>
 
-<section class="flex min-h-96 w-3/5 items-start justify-center py-5">
+<section class="flex min-h-96 w-3/5 items-center justify-center py-5">
 	<div class="flex w-1/4 flex-col items-center gap-5 text-center">
 		<Wifi size={70} />
 		<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[0].titulo}</h3>

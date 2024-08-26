@@ -37,12 +37,6 @@
 	<div class="flex w-1/3 items-center justify-evenly">
 		<Button
 			variant="link"
-			href="#estrutura-de-rede"
-			class=" font-inter text-base font-bold text-white underline  decoration-[#CA3438] decoration-2   hover:decoration-black md:text-2xl"
-			>Estrutura de Rede</Button
-		>
-		<Button
-			variant="link"
 			href="/login"
 			class=" font-inter text-base font-bold text-white underline  decoration-[#CA3438] decoration-2   hover:decoration-black md:text-2xl"
 			>Contato</Button

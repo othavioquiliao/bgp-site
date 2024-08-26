@@ -10,10 +10,13 @@
 	import mainImg from '$lib/img/img1.webp';
 	import monitoramentoImg from '$lib/img/planos/Server status monit.gif';
 	import customImg from '$lib/img/planos/Strategic consulting.gif';
+	import { Separator } from '$lib/components/ui/separator';
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
 	import SectionDiferenciais from '$lib/components/SectionDiferenciais.svelte';
+	import { Button } from '$lib/components/ui/button';
+	import ShineBorder from '$lib/components/ShineBorder/MultipleBorderExample.svelte';
 
 	interface Card {
 		img: string;
@@ -24,7 +27,7 @@
 	const cards: Card[] = [
 		{
 			img: CDN,
-			titulo: 'Plano CDN',
+			titulo: 'CDN',
 			topicos: [
 				'Solicitações de CDNs.',
 				'Peering com Google, Netflix e Facebook.',
@@ -34,7 +37,7 @@
 		},
 		{
 			img: BGP,
-			titulo: 'Plano BGP',
+			titulo: 'BGP',
 			topicos: [
 				'Suporte para iBGP e eBGP.',
 				'Gerenciamento de filtros, anúncios e peers BGP.',
@@ -45,7 +48,7 @@
 		},
 		{
 			img: ASN,
-			titulo: 'Plano ASN',
+			titulo: 'ASN',
 			topicos: [
 				'Suporte completo durante o processo.',
 				'Ajuda na obtenção do AS junto ao Registro.br.',
@@ -103,20 +106,31 @@
 	</div>
 </section>
 
+<!-- ------------------------------ DIFERENCIAIS	 ------------------------------ -->
+
 <div class="flex h-full w-full flex-col items-center justify-center">
-	<h1 class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]">
-		Diferenciais
-	</h1>
+	<div class="mb-10 flex w-full items-center justify-center">
+		<Separator class=" w-1/3" />
+		<h1 class=" w-full text-center font-inter text-4xl font-bold">Difereciais</h1>
+		<Separator class=" w-1/3" />
+	</div>
 	<SectionDiferenciais />
 </div>
 
+<!-- ------------------------------ PLANOS ------------------------------ -->
+
+<div class="mt-16 flex w-full items-center justify-center" id="Planos">
+	<Separator class=" w-1/3" />
+	<h1 class=" w-full text-center font-inter text-4xl font-bold">Nossos Planos</h1>
+	<Separator class=" w-1/3" />
+</div>
 <div class="flex w-3/5 flex-col pt-16 text-white">
 	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
 			>
-				Plano OSPF
+				OSPF
 			</h1>
 			<p class="break-before-right text-pretty text-xl">
 				Consideramos este o <span class="font-bold text-[#CB3E38]">plano mais importante</span>,
@@ -152,13 +166,13 @@
 
 	<section
 		id="estrutura-de-rede"
-		class="relative flex h-full flex-row-reverse items-center justify-center"
+		class="relative mb-10 flex h-full flex-row-reverse items-center justify-center"
 	>
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
 			>
-				Plano Servidor
+				Servidor
 			</h1>
 			<p class="text-pretty text-xl">
 				Temos <span class="font-bold text-[#CB3E38]">soluções em virtualização</span> e máquinas
@@ -200,13 +214,13 @@
 	</div>
 </section>
 
-<div class="flex w-3/5 flex-col gap-5 text-white">
+<div class="flex w-3/5 flex-col gap-5 pt-10 text-white">
 	<section class="relative flex h-full items-center justify-center gap-10">
 		<div class="flex w-1/2 flex-col gap-3">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38]"
+				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
 			>
-				Plano Monitoramento
+				Monitoramento
 			</h1>
 			<p class="break-before-right text-pretty text-xl">
 				Nossa equipe monitora sua rede de forma contínua, <span class="font-bold text-[#CB3E38]"
@@ -244,13 +258,12 @@
 		</div>
 	</section>
 
-	<section
-		id="estrutura-de-rede"
-		class=" flex h-full flex-row-reverse items-center justify-center gap-10"
-	>
+	<section class=" flex h-full flex-row-reverse items-center justify-center">
 		<div class="flex w-1/2 flex-col items-center gap-5 text-center">
-			<h1 class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38]">
-				Plano Custom
+			<h1
+				class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
+			>
+				Custom
 			</h1>
 			<p class="text-pretty text-xl">
 				Desenvolvido <span class="font-bold text-[#CB3E38]">exclusivamente</span> para sua empresa,
@@ -263,10 +276,22 @@
 				<span class="font-bold text-[#CB3E38]">personalizada e eficiente</span>.
 			</p>
 		</div>
-		<div class="flex min-h-[33rem] w-1/2 justify-center gap-5">
+		<div class="flex w-1/2 justify-center gap-5">
 			{#if scrollY > 2980}
 				<img src={customImg} alt="Plano Custom" loading="lazy" class="select-none" />
 			{/if}
 		</div>
 	</section>
 </div>
+<div class="flex w-full items-center justify-center">
+	<Separator class=" w-2/5" />
+	<ShineBorder
+		href="https://wa.me/5555555555555?text=Ola%20acabei%20de%20ver%20site%20e%20estou%20interessando%20em%20saber%20mais%20sobre%20seus%20planos!"
+		frase="Entrar em Contato"
+	/>
+	<Separator class=" w-2/5 " />
+</div>
+
+<footer class="flex min-h-64 w-full items-center justify-center">
+	<p>FOOTER</p>
+</footer>
