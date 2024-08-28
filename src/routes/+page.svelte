@@ -111,7 +111,7 @@
 <div class="flex h-full w-full flex-col items-center justify-center">
 	<div class="mb-10 flex w-full items-center justify-center">
 		<Separator class=" w-1/3" />
-		<h1 class=" w-full text-center font-inter text-4xl font-bold">Difereciais</h1>
+		<h1 class=" w-full text-center font-inter text-4xl font-bold">Diferenciais</h1>
 		<Separator class=" w-1/3" />
 	</div>
 	<SectionDiferenciais />
