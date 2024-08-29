@@ -2,6 +2,7 @@
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import WordPullUp from '$lib/components/BoxReveal/WordPullUp.svelte';
 
+	import coworking from '$lib/img/coworking.png';
 	import CDN from '$lib/img/planos/Memory storage(5).gif';
 	import BGP from '$lib/img/planos/Secure data(4).gif';
 	import ASN from '$lib/img/planos/Connected world(3).gif';
@@ -11,12 +12,11 @@
 	import monitoramentoImg from '$lib/img/planos/Server status monit.gif';
 	import customImg from '$lib/img/planos/Strategic consulting.gif';
 	import { Separator } from '$lib/components/ui/separator';
+	import ShineBorder from '$lib/components/ShineBorder/MultipleBorderExample.svelte';
 
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
 	import SectionDiferenciais from '$lib/components/SectionDiferenciais.svelte';
-	import { Button } from '$lib/components/ui/button';
-	import ShineBorder from '$lib/components/ShineBorder/MultipleBorderExample.svelte';
 
 	interface Card {
 		img: string;
@@ -109,11 +109,8 @@
 <!-- ------------------------------ DIFERENCIAIS	 ------------------------------ -->
 
 <div class="flex h-full w-full flex-col items-center justify-center">
-	<div class="mb-10 flex w-full items-center justify-center">
-		<Separator class=" w-1/3" />
-		<h1 class=" w-full text-center font-inter text-4xl font-bold">Diferenciais</h1>
-		<Separator class=" w-1/3" />
-	</div>
+	<h1 class=" w-full text-center font-inter text-4xl font-bold uppercase">Diferenciais</h1>
+
 	<SectionDiferenciais />
 </div>
 
@@ -121,7 +118,7 @@
 
 <div class="mt-16 flex w-full items-center justify-center" id="Planos">
 	<Separator class=" w-1/3" />
-	<h1 class=" w-full text-center font-inter text-4xl font-bold">Nossos Planos</h1>
+	<h1 class=" w-full text-center font-inter text-4xl font-bold uppercase">Nossos Planos</h1>
 	<Separator class=" w-1/3" />
 </div>
 <div class="flex w-3/5 flex-col pt-16 text-white">
@@ -203,7 +200,6 @@
 		</div>
 	</section>
 </div>
-
 <section class="relative flex h-full w-full items-center justify-center py-20">
 	<div class="flex w-3/5 justify-center gap-5">
 		{#if scrollY > 1250}
@@ -283,15 +279,14 @@
 		</div>
 	</section>
 </div>
-<div class="flex w-full items-center justify-center">
-	<Separator class=" w-2/5" />
-	<ShineBorder
-		href="https://wa.me/5555555555555?text=Ola%20acabei%20de%20ver%20site%20e%20estou%20interessando%20em%20saber%20mais%20sobre%20seus%20planos!"
-		frase="Entrar em Contato"
-	/>
-	<Separator class=" w-2/5 " />
+<div
+	class=" relative flex min-h-60 w-full items-center justify-center overflow-x-hidden bg-cover bg-center shadow-[inset_0_0_100px_110px_rgba(8,14,21,1)]"
+	style={`background-image: url(${coworking});`}
+>
+	<p class="z-10 whitespace-pre-wrap text-center text-5xl font-medium text-white">
+		<ShineBorder
+			href="https://wa.me/5511989111928?text=Ola%20Tudo%20bem%3F%0AOlhado%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais!"
+			frase="Entrar em Contato"
+		/>
+	</p>
 </div>
-
-<footer class="flex min-h-64 w-full items-center justify-center">
-	<p>FOOTER</p>
-</footer>

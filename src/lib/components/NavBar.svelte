@@ -2,6 +2,9 @@
 	import Logo from '$lib/img/BGP-branco.png';
 	import Button from './ui/button/button.svelte';
 	let scrollY: number;
+	import Facebook from 'lucide-svelte/icons/facebook';
+	import Instagram from 'lucide-svelte/icons/instagram';
+	import Linkedin from 'lucide-svelte/icons/linkedin';
 </script>
 
 <svelte:window bind:scrollY />
@@ -34,12 +37,27 @@
 			}`}}}"
 		/>
 	</a>
-	<div class="flex w-1/3 items-center justify-evenly">
+
+	<div class="flex w-1/3 items-center justify-center gap-5">
+		<Button variant="link" class="px-1 py-6">
+			<Instagram size={30} />
+		</Button>
+		<Button variant="link" class="px-1 py-6">
+			<Facebook size={30} />
+		</Button>
+		<Button variant="link" class="px-1 py-6">
+			<Linkedin size={30} />
+		</Button>
+
 		<Button
-			variant="link"
-			href="/login"
-			class=" font-inter text-base font-bold text-white underline  decoration-[#CA3438] decoration-2   hover:decoration-black md:text-2xl"
-			>Contato</Button
+			variant="outline"
+			href="https://wa.me/5511989111928?text=Ola%20Tudo%20bem%3F%0AOlhado%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais!"
+			class=" ml-5 border-[#CB3E38] bg-transparent px-2 py-5 font-inter text-base font-bold md:text-2xl "
 		>
+			<span class="pr-1 font-bold text-[#CB3E38]">(</span> 11<span
+				class="px-1 font-bold text-[#CB3E38]">)</span
+			>
+			98911<span class="px-1 font-bold text-[#CB3E38]">-</span>1928
+		</Button>
 	</div>
 </nav>
