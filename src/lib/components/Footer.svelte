@@ -1,11 +1,11 @@
 <script lang="ts">
-	import logoBGP from '$lib/img/logo-branco-com-X.png';
+	import logoBGP from '$lib/img/BGP-branco-X.png';
 	import { Separator } from '$lib/components/ui/separator';
 	import Facebook from 'lucide-svelte/icons/facebook';
 	import Instagram from 'lucide-svelte/icons/instagram';
 	import Linkedin from 'lucide-svelte/icons/linkedin';
 	import { Button } from './ui/button';
-	import brazilImg from '$lib/img/Design sem nome.png';
+	import brazilImg from '$lib/img/mapaBrasil.png';
 
 	let anoAtual = new Date().getFullYear();
 </script>

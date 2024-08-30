@@ -5,10 +5,10 @@
 	import coworking from '$lib/img/coworking.png';
 	import CDN from '$lib/img/planos/Online.gif';
 	import BGP from '$lib/img/planos/Endpoint.gif';
-	import ASN from '$lib/img/planos/Connected world(3).gif';
-	import BackBone from '$lib/img/planos/Server status(4).gif';
-	import ServidorPlano from '$lib/img/planos/Server(4).gif';
-	import mainImg from '$lib/img/img1.webp';
+	import ASN from '$lib/img/planos/Connected world.gif';
+	import BackBone from '$lib/img/planos/Server status.gif';
+	import ServidorPlano from '$lib/img/planos/Server.gif';
+	import mainImg from '$lib/img/mainImg.webp';
 	import customImg from '$lib/img/planos/Strategic consulting.gif';
 	import { Separator } from '$lib/components/ui/separator';
 	import ShineBorder from '$lib/components/ShineBorder/MultipleBorderExample.svelte';
