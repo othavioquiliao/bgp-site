@@ -17,7 +17,23 @@
 	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import { fade } from 'svelte/transition';
 	import SectionDiferenciais from '$lib/components/SectionDiferenciais.svelte';
+	import { onMount } from 'svelte';
+	let isMobile: boolean;
 
+	function checkIfMobile() {
+		isMobile = window.innerWidth <= 768; // Define o breakpoint para mobile
+	}
+
+	// Verifica se é mobile no momento da montagem do componente
+	onMount(() => {
+		checkIfMobile();
+		window.addEventListener('resize', checkIfMobile);
+
+		// Remove o event listener quando o componente for destruído
+		return () => {
+			window.removeEventListener('resize', checkIfMobile);
+		};
+	});
 	interface Card {
 		img: string;
 		titulo: string;
@@ -93,14 +109,24 @@
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl text-black">{scrollY}</h1> -->
 
 <section
-	class="bg-[ mb-10 flex h-full min-h-full w-full select-none items-center justify-center bg-cover bg-center bg-no-repeat object-cover"
-	style={`background-image: url(${mainImg});`}
+	class=" relative mb-10 flex h-full min-h-full w-full select-none items-center justify-center"
 >
-	<div class="z-10 flex flex-col items-center justify-center">
-		<WordPullUp words="Tecnologia & Inovação" velocidade={0.35} />
-		<WordPullUp words="para Melhor Performance" velocidade={0.55} />
+	<img
+		src={mainImg}
+		alt="Imagem principal"
+		loading="eager"
+		class="absolute h-full w-full object-cover blur-sm"
+	/>
+	<div class="z-10 flex flex-col items-center justify-center p-10">
+		{#if isMobile}
+			<WordPullUp words="Tecnologia & Inovação para" velocidade={0.35} />
+			<WordPullUp words="Melhor Performance" velocidade={0.55} />
+		{:else}
+			<WordPullUp words="Tecnologia & Inovação" velocidade={0.35} />
+			<WordPullUp words="para Melhor Performance" velocidade={0.55} />
+		{/if}
 
-		<h2 class="mt-[.5rem] flex items-center gap-3 text-2xl text-white">
+		<h2 class="mt-[.5rem] flex items-center gap-3 text-white md:text-2xl">
 			Consultoria para Provedores de Internet e Grandes Empresas
 		</h2>
 	</div>

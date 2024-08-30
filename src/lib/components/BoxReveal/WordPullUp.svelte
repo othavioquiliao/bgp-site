@@ -27,7 +27,7 @@
 <Motion variants={wrapperFramerProps} initial="hidden" animate="show" let:motion>
 	<h1
 		class={cn(
-			' bg-gradient-to-b from-white to-red-700 bg-clip-text text-start font-inter text-7xl font-extrabold tracking-[-0.02em] text-transparent text-white drop-shadow-2xl  ',
+			' bg-gradient-to-b from-white to-red-700 bg-clip-text  text-start font-inter text-5xl font-extrabold tracking-[-0.02em] text-transparent text-white  drop-shadow-2xl md:text-7xl  ',
 			className
 		)}
 		use:motion

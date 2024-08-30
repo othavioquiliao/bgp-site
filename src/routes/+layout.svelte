@@ -7,7 +7,7 @@
 
 <ModeWatcher defaultMode="dark" />
 <NavBar />
-<main class="flex h-screen w-full flex-col items-center">
+<main class="flex h-screen w-full flex-col items-center overflow-x-hidden">
 	<slot />
 	<Footer />
 </main>
