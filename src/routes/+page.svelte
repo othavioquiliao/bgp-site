@@ -139,7 +139,7 @@
 
 <!-- ------------------------------ PLANOS ------------------------------ -->
 
-<div class="mt-16 flex w-full items-center justify-center" id="Planos">
+<div class="mt-10 flex w-full items-center justify-center md:mt-16" id="Planos">
 	<Separator class="w-1/4  md:w-1/3" />
 	<h1 class=" w-full text-center font-inter text-3xl font-bold uppercase md:text-4xl">
 		Nossos Planos
@@ -190,7 +190,7 @@
 
 	<section
 		id="estrutura-de-rede"
-		class="relative mb-10 flex h-full flex-col-reverse items-center justify-center md:flex-row-reverse"
+		class="relative flex h-full flex-col-reverse items-center justify-center md:mb-10 md:flex-row-reverse"
 	>
 		<div class="flex w-full flex-col gap-3 px-5 text-center md:w-1/2 md:px-0 md:text-start">
 			<h1
@@ -227,19 +227,23 @@
 		</div>
 	</section>
 </div>
-<section class="relative flex h-full w-full items-center justify-center py-20">
-	<div class="flex w-3/5 justify-center gap-5">
+
+<!-- ----------------- CARDS ------------------------------------------ -->
+<!-- <section class="relative flex h-full w-full items-center justify-center py-20">
+	<div class="flex h-full w-full flex-col justify-center gap-5 px-5 md:w-3/5 md:flex-row md:px-0">
 		{#if scrollY > 1250}
 			{#each cards as card (card.titulo)}
 				<SquareCard {card} />
 			{/each}
 		{/if}
 	</div>
-</section>
+</section> -->
 
-<div class="flex w-3/5 flex-col gap-5 pt-10 text-white">
-	<section class="relative flex h-full items-center justify-center gap-10">
-		<div class="flex w-1/2 flex-col gap-3">
+<div class="flex w-full flex-col gap-5 text-white md:w-3/5 md:pt-10">
+	<section
+		class="relative flex h-full flex-col-reverse items-center justify-center gap-10 px-5 md:flex-row md:px-0"
+	>
+		<div class="flex w-full flex-col gap-3 text-center md:w-1/2">
 			<h1
 				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
 			>
@@ -257,9 +261,9 @@
 			<p class="text-pretty text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 			</p>
-			<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
+			<p class="text-pretty text-start text-xl">Destacamos os seguintes pontos:</p>
 
-			<ul class="flex flex-col items-start justify-start gap-2 text-lg">
+			<ul class="flex flex-col items-start justify-start gap-2 text-start text-lg">
 				{#each monitoramentoFeatures as feature}
 					<li class="flex gap-2">
 						<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -268,7 +272,7 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="flex w-1/2 justify-center gap-5">
+		<div class="flex w-full justify-center gap-5 md:w-1/2">
 			{#if scrollY > 2300}
 				<img
 					src={monitoramentoImg}
@@ -281,8 +285,8 @@
 		</div>
 	</section>
 
-	<section class=" flex h-full flex-row-reverse items-center justify-center">
-		<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+	<section class=" flex h-full flex-col-reverse items-center justify-center md:flex-row-reverse">
+		<div class="flex w-full flex-col items-center gap-5 px-5 text-center md:w-1/2 md:px-0">
 			<h1
 				class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
 			>
@@ -299,7 +303,7 @@
 				<span class="font-bold text-[#CB3E38]">personalizada e eficiente</span>.
 			</p>
 		</div>
-		<div class="flex w-1/2 justify-center gap-5">
+		<div class="flex w-full justify-center gap-5 md:w-1/2">
 			{#if scrollY > 2980}
 				<img src={customImg} alt="Plano Custom" loading="lazy" class="select-none" />
 			{/if}

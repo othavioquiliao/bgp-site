@@ -14,7 +14,7 @@
 	stroke-width="5"
 	stroke-linecap="round"
 	stroke="currentColor"
-	class={cn('absolute font-bold text-[#CB3E38]  ', className)}
+	class={cn('absolute  font-bold text-[#CB3E38]  ', className)}
 	{...$$restProps}
 >
 	<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
