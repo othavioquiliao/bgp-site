@@ -102,6 +102,7 @@
 	];
 
 	let scrollY = 0;
+	$: console.log('scrollY updated:', scrollY);
 </script>
 
 <svelte:window bind:scrollY />
@@ -126,7 +127,7 @@
 			<WordPullUp words="para Melhor Performance" velocidade={0.55} />
 		{/if}
 
-		<h2 class="mt-[.5rem] flex items-center gap-3 text-white md:text-2xl">
+		<h2 class="mt-[.5rem] flex items-center gap-3 text-xl text-white md:text-2xl">
 			Consultoria para Provedores de Internet e Grandes Empresas
 		</h2>
 	</div>
@@ -134,24 +135,24 @@
 
 <!-- ------------------------------ DIFERENCIAIS	 ------------------------------ -->
 
-<div class="flex h-full w-full flex-col items-center justify-center">
-	<h1 class=" w-full text-center font-inter text-4xl font-bold uppercase">Diferenciais</h1>
-
-	<SectionDiferenciais />
-</div>
+<SectionDiferenciais />
 
 <!-- ------------------------------ PLANOS ------------------------------ -->
 
 <div class="mt-16 flex w-full items-center justify-center" id="Planos">
-	<Separator class=" w-1/3" />
-	<h1 class=" w-full text-center font-inter text-4xl font-bold uppercase">Nossos Planos</h1>
-	<Separator class=" w-1/3" />
+	<Separator class="w-1/4  md:w-1/3" />
+	<h1 class=" w-full text-center font-inter text-3xl font-bold uppercase md:text-4xl">
+		Nossos Planos
+	</h1>
+	<Separator class="w-1/4  md:w-1/3" />
 </div>
-<div class="flex w-3/5 flex-col pt-16 text-white">
-	<section class="relative mb-20 flex h-full items-center justify-center gap-10">
-		<div class="flex w-1/2 flex-col gap-3">
+<div class="flex w-full flex-col pt-0 text-white md:w-3/5 md:pt-16">
+	<section
+		class="relative mb-20 flex h-full flex-col-reverse items-center justify-center gap-10 md:flex-row"
+	>
+		<div class="flex w-full flex-col gap-3 px-5 text-center md:w-1/2 md:px-0 md:text-start">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
+				class="mb-5 w-full text-center font-inter text-2xl font-bold underline decoration-[#CB3E38] underline-offset-8 md:text-4xl"
 			>
 				OSPF
 			</h1>
@@ -163,9 +164,9 @@
 			<p class="text-pretty text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 			</p>
-			<p class="text-pretty text-xl">Destacamos os seguintes pontos:</p>
+			<p class="text-pretty text-start text-xl">Destacamos os seguintes pontos:</p>
 
-			<ul class="flex flex-col items-start justify-start gap-2 text-lg">
+			<ul class="flex flex-col items-start justify-start gap-2 text-start text-lg">
 				{#each networkFeatures as feature}
 					<li class="flex gap-2">
 						<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -174,7 +175,7 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="flex w-1/2 justify-center gap-5">
+		<div class="flex w-full justify-center gap-5 md:w-1/2">
 			{#if scrollY > 150}
 				<img
 					src={BackBone}
@@ -189,11 +190,11 @@
 
 	<section
 		id="estrutura-de-rede"
-		class="relative mb-10 flex h-full flex-row-reverse items-center justify-center"
+		class="relative mb-10 flex h-full flex-col-reverse items-center justify-center md:flex-row-reverse"
 	>
-		<div class="flex w-1/2 flex-col gap-3">
+		<div class="flex w-full flex-col gap-3 px-5 text-center md:w-1/2 md:px-0 md:text-start">
 			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
+				class="mb-5 w-full text-center font-inter text-2xl font-bold underline decoration-[#CB3E38] underline-offset-8 md:text-4xl"
 			>
 				Servidor
 			</h1>
@@ -208,9 +209,9 @@
 			<p class="text-pretty text-xl">
 				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
 			</p>
-			<p class="text-pretty text-xl">Oferecemos:</p>
+			<p class="text-pretty text-start text-xl">Oferecemos:</p>
 
-			<ul class="flex flex-col items-start justify-start gap-2 text-lg">
+			<ul class="flex flex-col items-start justify-start gap-2 text-start text-lg">
 				{#each serverFeatures as feature}
 					<li class="flex gap-2">
 						<ChevronRight size={20} class="h-4" color="#CB3E38" />
@@ -219,7 +220,7 @@
 				{/each}
 			</ul>
 		</div>
-		<div class="flex w-1/2 justify-center gap-5">
+		<div class="flex w-full justify-center gap-5 md:w-1/2">
 			{#if scrollY > 650}
 				<img src={ServidorPlano} alt="Plano de Servidor" loading="lazy" class="select-none" />
 			{/if}

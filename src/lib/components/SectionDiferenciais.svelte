@@ -38,29 +38,43 @@
 	];
 </script>
 
-<section class="flex min-h-96 w-3/5 items-center justify-center py-5">
-	<div class="flex w-1/4 flex-col items-center gap-5 text-center">
-		<Wifi size={70} />
-		<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[0].titulo}</h3>
-		<p class="text-pretty text-lg">{diferenciaisFeatures[0].descricao}</p>
-	</div>
-	<Separator orientation="vertical" class="mx-5" />
-	<div class="flex w-1/4 flex-col items-center gap-5 text-center">
-		<Gem size={70} />
+<div class="flex h-full w-full flex-col items-center justify-center">
+	<h1 class=" mb-10 w-full text-center font-inter text-2xl font-bold uppercase md:mb-0 md:text-4xl">
+		Diferenciais
+	</h1>
 
-		<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[1].titulo}</h3>
-		<p class="text-pretty text-lg">{diferenciaisFeatures[1].descricao}</p>
-	</div>
-	<Separator orientation="vertical" class="mx-5" />
-	<div class="flex w-1/4 flex-col items-center gap-5 text-center">
-		<Headset size={70} />
-		<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[2].titulo}</h3>
-		<p class="text-pretty text-lg">{diferenciaisFeatures[2].descricao}</p>
-	</div>
-	<Separator orientation="vertical" class="mx-5" />
-	<div class="flex w-1/4 flex-col items-center gap-5 text-center">
-		<HandCoins size={70} />
-		<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[3].titulo}</h3>
-		<p class="text-pretty text-lg">{diferenciaisFeatures[3].descricao}</p>
-	</div>
-</section>
+	<section
+		class="flex min-h-96 w-full flex-col items-center justify-center gap-5 px-5 py-5 md:w-3/5 md:flex-row md:gap-0 md:px-0"
+	>
+		<div class="flex w-full md:w-2/4">
+			<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+				<Wifi size={70} />
+				<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[0].titulo}</h3>
+				<p class="text-md text-pretty md:text-lg">{diferenciaisFeatures[0].descricao}</p>
+			</div>
+			<Separator orientation="vertical" class="mx-5" />
+			<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+				<Gem size={70} />
+
+				<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[1].titulo}</h3>
+				<p class="text-md text-pretty md:text-lg">{diferenciaisFeatures[1].descricao}</p>
+			</div>
+		</div>
+		<Separator orientation="horizontal" class="  w-full md:hidden" />
+
+		<div class="flex w-full md:w-2/4">
+			<Separator orientation="vertical" class="mx-5 hidden md:flex" />
+			<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+				<Headset size={70} />
+				<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[2].titulo}</h3>
+				<p class="text-md text-pretty md:text-lg">{diferenciaisFeatures[2].descricao}</p>
+			</div>
+			<Separator orientation="vertical" class="mx-5" />
+			<div class="flex w-1/2 flex-col items-center gap-5 text-center">
+				<HandCoins size={70} />
+				<h3 class="text-2xl font-semibold text-[#CB3E38]">{diferenciaisFeatures[3].titulo}</h3>
+				<p class="text-md text-pretty md:text-lg">{diferenciaisFeatures[3].descricao}</p>
+			</div>
+		</div>
+	</section>
+</div>
