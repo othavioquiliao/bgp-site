@@ -3,13 +3,12 @@
 	import WordPullUp from '$lib/components/BoxReveal/WordPullUp.svelte';
 
 	import coworking from '$lib/img/coworking.png';
-	import CDN from '$lib/img/planos/Memory storage(5).gif';
-	import BGP from '$lib/img/planos/Secure data(4).gif';
+	import CDN from '$lib/img/planos/Online.gif';
+	import BGP from '$lib/img/planos/Endpoint.gif';
 	import ASN from '$lib/img/planos/Connected world(3).gif';
 	import BackBone from '$lib/img/planos/Server status(4).gif';
 	import ServidorPlano from '$lib/img/planos/Server(4).gif';
 	import mainImg from '$lib/img/img1.webp';
-	import monitoramentoImg from '$lib/img/planos/Server status monit.gif';
 	import customImg from '$lib/img/planos/Strategic consulting.gif';
 	import { Separator } from '$lib/components/ui/separator';
 	import ShineBorder from '$lib/components/ShineBorder/MultipleBorderExample.svelte';
