@@ -93,16 +93,7 @@
 		'Disponibilidade de adicionar espaço para o seu sistema de gerência!'
 	];
 
-	const monitoramentoFeatures: string[] = [
-		'Monitoramento contínuo do uso da banda IP ou IX “PTT”',
-		'Detecção de quedas em operadoras ou transportes, com contato imediato para solução',
-		'Monitoramento em tempo real do Core, POPs e roteadores internos',
-		'Supervisão de servidores',
-		'Otimização do uso de equipamentos'
-	];
-
 	let scrollY = 0;
-	$: console.log('scrollY updated:', scrollY);
 </script>
 
 <svelte:window bind:scrollY />
@@ -154,7 +145,7 @@
 			<h1
 				class="mb-5 w-full text-center font-inter text-2xl font-bold underline decoration-[#CB3E38] underline-offset-8 md:text-4xl"
 			>
-				OSPF
+				Core Base
 			</h1>
 			<p class="break-before-right text-pretty text-xl">
 				Consideramos este o <span class="font-bold text-[#CB3E38]">plano mais importante</span>,
@@ -226,10 +217,38 @@
 		</div>
 	</section>
 </div>
+<!-- ----------------   Custom -->
+
+<section
+	class="flex h-full w-full flex-col-reverse items-center justify-center gap-5 text-white md:w-3/5 md:flex-row"
+>
+	<div class="flex w-full flex-col items-center gap-5 px-5 text-center md:w-1/2 md:px-0">
+		<h1
+			class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
+		>
+			Custom
+		</h1>
+		<p class="text-pretty text-xl">
+			Desenvolvido <span class="font-bold text-[#CB3E38]">exclusivamente</span> para sua empresa,
+			<span class="font-bold text-[#CB3E38]">completamente adaptável</span> às suas necessidades.
+		</p>
+		<p class="text-pretty text-xl">
+			Nós moldamos nossos serviços para <span class="font-bold text-[#CB3E38]">garantir</span>
+			que você receba exatamente o <span class="font-bold text-[#CB3E38]">suporte</span> que
+			precisa, de forma
+			<span class="font-bold text-[#CB3E38]">personalizada e eficiente</span>.
+		</p>
+	</div>
+	<div class="flex w-full justify-center gap-5 md:w-1/2">
+		{#if scrollY > 100}
+			<img src={customImg} alt="Plano Custom" loading="lazy" class="select-none" />
+		{/if}
+	</div>
+</section>
 
 <!-- ----------------- CARDS ------------------------------------------ -->
 <section
-	class="relative flex w-full flex-col flex-nowrap items-center justify-center gap-5 px-5 py-10 md:w-3/5 md:flex-row md:px-0 md:py-20"
+	class="relative flex w-full flex-col flex-nowrap items-center justify-center gap-5 px-5 py-10 md:w-3/5 md:flex-row md:px-0 md:pb-20 md:pt-10"
 >
 	{#if scrollY > 1250}
 		{#each cards as card (card.titulo)}
@@ -238,79 +257,6 @@
 	{/if}
 </section>
 
-<!-- ---------------- Monitoramento + Custom -->
-
-<div class="flex w-full flex-col gap-5 text-white md:w-3/5 md:pt-10">
-	<section
-		class="relative flex h-full flex-col-reverse items-center justify-center gap-5 px-5 md:flex-row md:gap-10 md:px-0"
-	>
-		<div class="flex w-full flex-col gap-3 text-center md:w-1/2">
-			<h1
-				class="mb-5 w-full text-center font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
-			>
-				Monitoramento
-			</h1>
-			<p class="break-before-right text-pretty text-xl">
-				Nossa equipe monitora sua rede de forma contínua, <span class="font-bold text-[#CB3E38]"
-					>garantindo</span
-				>
-				a estabilidade ao agir prontamente em casos de falhas,
-				<span class="font-bold text-[#CB3E38]">otimizando o uso de equipamentos</span>
-				e mantendo o <span class="font-bold text-[#CB3E38]">desempenho</span> dos servidores e roteadores
-				no máximo.
-			</p>
-			<p class="text-pretty text-xl">
-				Uma topologia de rede bem projetada resulta em uma excelente experiência de navegação.
-			</p>
-			<p class="text-pretty text-start text-xl">Destacamos os seguintes pontos:</p>
-
-			<ul class="flex flex-col items-start justify-start gap-2 text-start text-lg">
-				{#each monitoramentoFeatures as feature}
-					<li class="flex gap-2">
-						<ChevronRight size={20} class="h-4" color="#CB3E38" />
-						{feature}
-					</li>
-				{/each}
-			</ul>
-		</div>
-		<div class="flex w-full justify-center gap-5 md:w-1/2">
-			{#if scrollY > 2300}
-				<img
-					src={monitoramentoImg}
-					alt="Plano Monitoramento"
-					loading="lazy"
-					class="select-none"
-					transition:fade={{ delay: 0, duration: 300 }}
-				/>
-			{/if}
-		</div>
-	</section>
-
-	<section class=" flex h-full flex-col-reverse items-center justify-center md:flex-row-reverse">
-		<div class="flex w-full flex-col items-center gap-5 px-5 text-center md:w-1/2 md:px-0">
-			<h1
-				class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
-			>
-				Custom
-			</h1>
-			<p class="text-pretty text-xl">
-				Desenvolvido <span class="font-bold text-[#CB3E38]">exclusivamente</span> para sua empresa,
-				<span class="font-bold text-[#CB3E38]">completamente adaptável</span> às suas necessidades.
-			</p>
-			<p class="text-pretty text-xl">
-				Nós moldamos nossos serviços para <span class="font-bold text-[#CB3E38]">garantir</span>
-				que você receba exatamente o <span class="font-bold text-[#CB3E38]">suporte</span> que
-				precisa, de forma
-				<span class="font-bold text-[#CB3E38]">personalizada e eficiente</span>.
-			</p>
-		</div>
-		<div class="flex w-full justify-center gap-5 md:w-1/2">
-			{#if scrollY > 2980}
-				<img src={customImg} alt="Plano Custom" loading="lazy" class="select-none" />
-			{/if}
-		</div>
-	</section>
-</div>
 <div
 	class=" relative flex min-h-60 w-full items-center justify-center overflow-x-hidden bg-cover bg-center shadow-[inset_0_0_100px_110px_rgba(8,14,21,1)]"
 	style={`background-image: url(${coworking});`}
