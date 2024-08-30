@@ -35,7 +35,7 @@
 		<Sheet.Root>
 			<Sheet.Trigger class=""><Menu size={40} /></Sheet.Trigger>
 			<Sheet.Content side="left">
-				<Sheet.Header class="items-c enter flex w-full		flex-col justify-center gap-10">
+				<Sheet.Header class="flex w-full flex-col		items-center justify-center gap-10">
 					<Sheet.Title><img src={Logo} alt="Logo BGS consultoria" class="w-36" /></Sheet.Title>
 					<Sheet.Description class="flex w-full flex-col items-center gap-5">
 						<Button variant="outline" href="/" class="w-2/3 text-xl font-bold">Home</Button>
