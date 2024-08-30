@@ -80,7 +80,7 @@
 {:else}
 	<nav
 		class="fixed z-20 flex h-16 w-full items-center justify-between bg-gradient-to-b {scrollY > 900
-			? 'from-background  from-25% to-transparent'
+			? 'from-background  from-50% to-transparent'
 			: ''}"
 	>
 		<!-- Exibe o menu sanduíche se for mobile -->
@@ -90,13 +90,13 @@
 			<Button
 				variant="link"
 				href="/"
-				class=" font-inter  text-base font-bold text-white underline  decoration-[#CA3438] decoration-2   hover:decoration-black md:text-2xl"
+				class=" font-inter  text-base font-bold text-white underline decoration-[#CA3438] decoration-2 underline-offset-4   hover:decoration-white md:text-2xl"
 				>Home</Button
 			>
 			<Button
 				variant="link"
 				href="#Planos"
-				class=" font-inter text-base font-bold text-white underline  decoration-[#CA3438] decoration-2   hover:decoration-black md:text-2xl"
+				class=" font-inter  text-base font-bold text-white underline decoration-[#CA3438] decoration-2 underline-offset-4   hover:decoration-white md:text-2xl"
 				>Planos</Button
 			>
 		</div>

@@ -12,7 +12,7 @@
 	export let card: Card;
 </script>
 
-<div class={cn('h-[49rem]  ', className)}>
+<div class={cn('h-[45rem] md:h-[49rem]  ', className)}>
 	<img src={card.img} alt={card.titulo} class="w-full select-none" />
 	<div class="flex flex-col gap-5">
 		<h3 class="text-center font-inter text-3xl font-semibold underline decoration-[#CB3E38]">

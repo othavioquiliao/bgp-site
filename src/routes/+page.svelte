@@ -148,7 +148,7 @@
 </div>
 <div class="flex w-full flex-col pt-0 text-white md:w-3/5 md:pt-16">
 	<section
-		class="relative mb-20 flex h-full flex-col-reverse items-center justify-center gap-10 md:flex-row"
+		class="relative mb-10 flex h-full flex-col-reverse items-center justify-center gap-10 md:mb-20 md:flex-row"
 	>
 		<div class="flex w-full flex-col gap-3 px-5 text-center md:w-1/2 md:px-0 md:text-start">
 			<h1
@@ -189,7 +189,6 @@
 	</section>
 
 	<section
-		id="estrutura-de-rede"
 		class="relative flex h-full flex-col-reverse items-center justify-center md:mb-10 md:flex-row-reverse"
 	>
 		<div class="flex w-full flex-col gap-3 px-5 text-center md:w-1/2 md:px-0 md:text-start">
@@ -229,19 +228,21 @@
 </div>
 
 <!-- ----------------- CARDS ------------------------------------------ -->
-<!-- <section class="relative flex h-full w-full items-center justify-center py-20">
-	<div class="flex h-full w-full flex-col justify-center gap-5 px-5 md:w-3/5 md:flex-row md:px-0">
-		{#if scrollY > 1250}
-			{#each cards as card (card.titulo)}
-				<SquareCard {card} />
-			{/each}
-		{/if}
-	</div>
-</section> -->
+<section
+	class="relative flex w-full flex-col flex-nowrap items-center justify-center gap-5 px-5 py-10 md:w-3/5 md:flex-row md:px-0 md:py-20"
+>
+	{#if scrollY > 1250}
+		{#each cards as card (card.titulo)}
+			<SquareCard {card} />
+		{/each}
+	{/if}
+</section>
+
+<!-- ---------------- Monitoramento + Custom -->
 
 <div class="flex w-full flex-col gap-5 text-white md:w-3/5 md:pt-10">
 	<section
-		class="relative flex h-full flex-col-reverse items-center justify-center gap-10 px-5 md:flex-row md:px-0"
+		class="relative flex h-full flex-col-reverse items-center justify-center gap-5 px-5 md:flex-row md:gap-10 md:px-0"
 	>
 		<div class="flex w-full flex-col gap-3 text-center md:w-1/2">
 			<h1
