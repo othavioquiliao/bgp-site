@@ -39,7 +39,7 @@
 </script>
 
 <div class="flex h-full w-full flex-col items-center justify-center">
-	<h1 class=" mb-8 w-full text-center font-inter text-2xl font-bold uppercase md:mb-0 md:text-4xl">
+	<h1 class=" mb-8 w-full text-center font-inter text-3xl font-bold uppercase md:mb-0 md:text-4xl">
 		Diferenciais
 	</h1>
 

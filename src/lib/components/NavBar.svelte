@@ -25,6 +25,11 @@
 			window.removeEventListener('resize', checkIfMobile);
 		};
 	});
+	let menuOpen = false;
+
+	function toggleMenu() {
+		menuOpen = !menuOpen;
+	}
 </script>
 
 <svelte:window bind:scrollY />
@@ -32,15 +37,27 @@
 	<nav
 		class="fixed z-20 flex min-h-16 w-full items-center justify-center bg-gradient-to-b from-background from-25% to-transparent px-5"
 	>
-		<Sheet.Root>
+		<Sheet.Root bind:open={menuOpen}>
 			<Sheet.Trigger class=""><Menu size={40} /></Sheet.Trigger>
 			<Sheet.Content side="left">
 				<Sheet.Header class="flex w-full flex-col		items-center justify-center gap-10">
 					<Sheet.Title><img src={Logo} alt="Logo BGS consultoria" class="w-36" /></Sheet.Title>
 					<Sheet.Description class="flex w-full flex-col items-center gap-5">
-						<Button variant="outline" href="/" class="w-2/3 text-xl font-bold">Home</Button>
-						<Button variant="outline" href="#Planos" class="w-2/3 text-xl font-bold">Planos</Button>
-						<Button variant="outline" href="#Sobre" class="w-2/3 text-xl font-bold">Sobre</Button>
+						<Button variant="outline" href="/" class="w-2/3 text-xl font-bold" on:click={toggleMenu}
+							>Home</Button
+						>
+						<Button
+							variant="outline"
+							href="#Planos"
+							class="w-2/3 text-xl font-bold"
+							on:click={toggleMenu}>Planos</Button
+						>
+						<Button
+							variant="outline"
+							href="#Sobre"
+							on:click={toggleMenu}
+							class="w-2/3 text-xl font-bold">Sobre</Button
+						>
 
 						<div
 							class="mt-16 flex w-3/4 flex-col items-center justify-center

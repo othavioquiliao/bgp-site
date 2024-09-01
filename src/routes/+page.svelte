@@ -223,7 +223,7 @@
 >
 	<div class="flex w-full flex-col items-center gap-5 px-5 text-center md:w-1/2 md:px-0">
 		<h1
-			class="mb-2 w-full font-inter text-4xl font-bold underline decoration-[#CB3E38] underline-offset-8"
+			class="mb-2 w-full font-inter text-3xl font-bold underline decoration-[#CB3E38] underline-offset-8 md:text-4xl"
 		>
 			Custom
 		</h1>
@@ -257,6 +257,7 @@
 </section>
 
 <div
+	id="Sobre"
 	class=" relative flex min-h-60 w-full items-center justify-center overflow-x-hidden bg-cover bg-center shadow-[inset_0_0_100px_110px_rgba(8,14,21,1)]"
 	style={`background-image: url(${coworking});`}
 >
