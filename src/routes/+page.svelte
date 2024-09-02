@@ -2,7 +2,7 @@
 	import SquareCard from '$lib/components/CardPlanos/SquareCard.svelte';
 	import WordPullUp from '$lib/components/BoxReveal/WordPullUp.svelte';
 
-	import coworking from '$lib/img/coworking.png';
+	import coworking from '$lib/img/coworking.webp';
 	import CDN from '$lib/img/planos/Online.gif';
 	import BGP from '$lib/img/planos/Endpoint.gif';
 	import ASN from '$lib/img/planos/Connected world.gif';

@@ -1,10 +1,9 @@
 <script lang="ts">
-	import Logo from '$lib/img/BGP-branco.png';
+	import Logo from '$lib/img/BGP-branco.webp';
 	import Menu from 'lucide-svelte/icons/menu';
 	import Button from './ui/button/button.svelte';
 	import Facebook from 'lucide-svelte/icons/facebook';
 	import Instagram from 'lucide-svelte/icons/instagram';
-	import Linkedin from 'lucide-svelte/icons/linkedin';
 	import { onMount } from 'svelte';
 	import * as Sheet from '$lib/components/ui/sheet';
 
@@ -64,24 +63,32 @@
 						gap-10"
 						>
 							<div>
-								<Button variant="link" class="px-1 py-6">
+								<Button
+									target="_blank"
+									variant="link"
+									class="px-1 py-6"
+									href="https://www.instagram.com/bgpconsultoria/"
+								>
 									<Instagram size={40} />
 								</Button>
-								<Button variant="link" class="px-1 py-6">
+								<Button
+									target="_blank"
+									variant="link"
+									class="px-1 py-6"
+									href="https://www.facebook.com/bgpconsultoria/?locale=pt_BR"
+								>
 									<Facebook size={40} />
-								</Button>
-								<Button variant="link" class="px-1 py-6">
-									<Linkedin size={40} />
 								</Button>
 							</div>
 
 							<Button
 								variant="outline"
 								href="https://wa.me/5511989111928?text=Ola%20Tudo%20bem%3F%0AOlhado%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais!"
+								target="_blank"
 								class="  border-[#CB3E38] bg-transparent px-2 py-5 font-inter text-base font-bold md:text-xl "
 							>
 								<span class="pr-1 font-bold text-[#CB3E38]">(</span> 11<span
-									class="px-1 font-bold text-[#CB3E38]">)</span
+									class="px-1 font-bold text-[#9d7978]">)</span
 								>
 								98911<span class="px-1 font-bold text-[#CB3E38]">-</span>1928
 							</Button>
@@ -129,19 +136,27 @@
 		</a>
 
 		<div class="flex w-1/3 items-center justify-center gap-5">
-			<Button variant="link" class="px-1 py-6">
+			<Button
+				variant="link"
+				class="px-1 py-6"
+				href="https://www.instagram.com/bgpconsultoria/"
+				target="_blank"
+			>
 				<Instagram size={30} />
 			</Button>
-			<Button variant="link" class="px-1 py-6">
+			<Button
+				variant="link"
+				target="_blank"
+				class="px-1 py-6"
+				href="https://www.facebook.com/bgpconsultoria/?locale=pt_BR"
+			>
 				<Facebook size={30} />
-			</Button>
-			<Button variant="link" class="px-1 py-6">
-				<Linkedin size={30} />
 			</Button>
 
 			<Button
 				variant="outline"
 				href="https://wa.me/5511989111928?text=Ola%20Tudo%20bem%3F%0AOlhado%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais!"
+				target="_blank"
 				class=" ml-5 border-[#CB3E38] bg-transparent px-2 py-5 font-inter text-base font-bold md:text-xl "
 			>
 				<span class="pr-1 font-bold text-[#CB3E38]">(</span> 11<span

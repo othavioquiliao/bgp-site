@@ -1,11 +1,10 @@
 <script lang="ts">
-	import logoBGP from '$lib/img/BGP-branco-X.png';
+	import logoBGP from '$lib/img/BGP-branco-X.webp';
 	import { Separator } from '$lib/components/ui/separator';
 	import Facebook from 'lucide-svelte/icons/facebook';
 	import Instagram from 'lucide-svelte/icons/instagram';
-	import Linkedin from 'lucide-svelte/icons/linkedin';
 	import { Button } from './ui/button';
-	import brazilImg from '$lib/img/mapaBrasil.png';
+	import brazilImg from '$lib/img/mapaBrasil.webp';
 
 	let anoAtual = new Date().getFullYear();
 </script>
@@ -22,14 +21,21 @@
 		<p class="hidden md:flex">Razao Social: Bgp Consultoria Ltda.</p>
 		<p class="hidden md:flex">CNPJ: 29.432.186/0001-30</p>
 		<div class="flex w-full justify-center gap-5 pb-10 pt-5 md:justify-start md:pb-0">
-			<Button variant="ghost" class="px-1 py-6">
+			<Button
+				variant="ghost"
+				target="_blank"
+				class="px-1 py-6"
+				href="https://www.instagram.com/bgpconsultoria/"
+			>
 				<Instagram size={40} />
 			</Button>
-			<Button variant="ghost" class="px-1 py-6">
+			<Button
+				target="_blank"
+				variant="ghost"
+				class="px-1 py-6"
+				href="https://www.facebook.com/bgpconsultoria/?locale=pt_BR"
+			>
 				<Facebook size={40} />
-			</Button>
-			<Button variant="ghost" class="px-1 py-6">
-				<Linkedin size={40} />
 			</Button>
 		</div>
 	</div>
@@ -66,7 +72,12 @@
 				Atendemos o <span class="font-semibold text-[#CB3E38]">Brasil inteiro</span> , entre em contato
 				conosco para saber mais sobre nossos serviços.
 			</p>
-			<Button variant="outline" class="w-2/4 border-[#CB3E38]">(11) 98911-1928</Button>
+			<Button
+				variant="outline"
+				class="min-w-2/4 border-[#CB3E38]"
+				href="https://wa.me/5511989111928?text=Ola%20Tudo%20bem%3F%0AOlhado%20o%20seu%20site%20e%20gostaria%20de%20saber%20mais!"
+				target="_blank">(11) 98911-1928</Button
+			>
 		</div>
 		<img src={brazilImg} alt="Mapa do brazil" class="w-1/2" />
 	</div>

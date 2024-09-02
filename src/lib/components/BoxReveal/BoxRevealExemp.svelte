@@ -1,7 +1,6 @@
 <script>
 	// From Shadcn Svelte UI Library
 	import Button from '$lib/components/ui/button/button.svelte';
-	import ChevronRight from 'lucide-svelte/icons/chevron-right';
 	import BoxReveal from './BoxReveal.svelte';
 </script>
 
