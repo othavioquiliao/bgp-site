@@ -13,7 +13,7 @@
 	function checkIfMobile() {
 		isMobile = window.innerWidth <= 768; // Define o breakpoint para mobile
 	}
-
+	let activeLink = "Home"
 	// Verifica se é mobile no momento da montagem do componente
 	onMount(() => {
 		checkIfMobile();
@@ -112,17 +112,27 @@
 		<!-- Menu normal para desktop -->
 		<div class="flex w-1/3 items-center justify-evenly">
 			<Button
-				variant="link"
-				href="/"
-				class=" font-inter  text-base font-bold text-white underline decoration-[#CA3438] decoration-2 underline-offset-4   hover:decoration-white md:text-2xl"
-				>Home</Button
-			>
+			variant="link"
+			href="#Home"
+			class="hover: relative font-inter w-20  text-base md:text-2xl font-bold text-white after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#CA3438] after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100 {activeLink ===
+			'Home'
+					? 'after:origin-bottom-left after:scale-x-100'
+					: ''}"
+			on:click={() => (activeLink = 'Home')}
+	>
+	Home
+	</Button>
 			<Button
-				variant="link"
-				href="#Planos"
-				class=" font-inter  text-base font-bold text-white underline decoration-[#CA3438] decoration-2 underline-offset-4   hover:decoration-white md:text-2xl"
-				>Planos</Button
-			>
+			variant="link"
+			href="#Planos"
+			class="hover: relative font-inter w-20  text-base md:text-2xl font-bold text-white after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#CA3438] after:transition-transform after:duration-300 after:ease-in-out hover:after:origin-bottom-left hover:after:scale-x-100 {activeLink ===
+			'Planos'
+					? 'after:origin-bottom-left after:scale-x-100'
+					: ''}"
+			on:click={() => (activeLink = 'Planos')}
+	>
+	Planos
+	</Button>
 		</div>
 
 		<a href="/" class="relative flex w-1/3 items-center justify-center">

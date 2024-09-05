@@ -100,6 +100,7 @@
 <!-- <h1 class="fixed right-40 top-40 z-20 bg-white text-5xl text-black">{scrollY}</h1> -->
 
 <section
+	id="Home"
 	class=" relative mb-10 flex h-full min-h-full w-full select-none items-center justify-center"
 >
 	<img

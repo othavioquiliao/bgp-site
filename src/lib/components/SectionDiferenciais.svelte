@@ -38,8 +38,8 @@
 	];
 </script>
 
-<div class="flex h-full w-full flex-col items-center justify-center">
-	<h1 class=" mb-8 w-full text-center font-inter text-3xl font-bold uppercase md:mb-0 md:text-4xl">
+<div class="flex h-full w-full flex-col items-center justify-center md:pt-8">
+	<h1 class=" mb-8 w-full text-center font-inter text-3xl font-bold uppercase md:mb-8 md:text-4xl">
 		Diferenciais
 	</h1>
 
