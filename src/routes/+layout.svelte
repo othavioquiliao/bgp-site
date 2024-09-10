@@ -16,11 +16,19 @@
 		scriptTag.async = true;
 		document.head.appendChild(scriptTag);
 
+		// Executa quando o script for carregado
 		scriptTag.onload = () => {
 			window.dataLayer = window.dataLayer || [];
 			window.gtag = gtag;
 			gtag('js', new Date());
 			gtag('config', 'AW-11448617367');
+
+			// Snippet de evento para conversão (página de contato)
+			gtag('event', 'conversion', {
+				send_to: 'AW-11448617367/5e9GCIW8nNEZEJeTkNMq',
+				value: 1.0,
+				currency: 'BRL'
+			});
 		};
 	});
 </script>
